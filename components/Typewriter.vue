@@ -50,7 +50,6 @@ export default {
   created() {
     // setTimeout(this.typeText);
     this.typeText();
-    console.log(this.typeStatus);
   },
 };
 </script>
