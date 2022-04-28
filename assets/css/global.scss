@@ -1,0 +1,27 @@
+@import './global/imports.scss';
+
+body {
+    background-color: $kahlifar-blue;
+    color: $white;
+    font-size: $font-size-normal;
+    font-family: $font-family-base;
+}
+
+.material-icons {
+    font-size: inherit;
+}
+
+html,
+body {
+    >div#__nuxt {
+        >div#__layout {
+            height: 100%;
+        }
+
+        height: 100%;
+    }
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

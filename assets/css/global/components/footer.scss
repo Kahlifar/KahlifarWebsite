@@ -1,0 +1,12 @@
+.footer {
+    align-items: center;
+    background-color: $kahlifar-blue-120;
+    box-shadow: 8px 0 10px -2px $kahlifar-light-blue;
+    padding: 1rem 0;
+    width: 100%;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

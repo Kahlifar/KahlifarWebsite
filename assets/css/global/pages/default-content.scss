@@ -1,0 +1,15 @@
+.default-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+
+    h1 {
+        letter-spacing: 1px;
+    }
+
+    .material-icons {
+        font-size: $font-size-normal + 3px;
+    }
+}

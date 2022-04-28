@@ -1,0 +1,11 @@
+.default-container {
+    // Align Footer
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    .default-content {
+        flex: 1;
+        margin: 0 1.5rem;
+    }
+}

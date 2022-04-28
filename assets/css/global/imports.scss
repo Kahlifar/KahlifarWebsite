@@ -1,0 +1,20 @@
+@import '~/node_modules/material-icons/iconfont/material-icons.css';
+
+// Variables
+@import './variables/breakpoints.scss';
+@import './variables/colors.scss';
+@import './variables/font.scss';
+
+// General
+@import './general/links.scss';
+@import './general/modifier.scss';
+
+// Components
+@import './components/footer.scss';
+@import './components/linkbutton.scss';
+// @import './components/navbar.scss';
+@import './components/typewriter.scss';
+
+// Pages
+@import './pages/default-container.scss';
+@import './pages/default-content.scss';
