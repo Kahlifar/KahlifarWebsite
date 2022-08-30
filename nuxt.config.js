@@ -56,7 +56,7 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxt/content',
-    // 'vue-typer',
+    '@nuxtjs/axios',
   ],
 
   axios: {

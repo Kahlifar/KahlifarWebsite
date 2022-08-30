@@ -1,0 +1,54 @@
+.nav-bar {
+    height: 5rem;
+    background-color: $kahlifar-blue-120;
+    box-shadow: 8px 0 10px -2px $kahlifar-light-blue;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 1.5rem;
+
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+        &__links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1.5rem;
+                height: 5rem;
+                font-size: 16px;
+
+                &:hover {
+                    background-color: $kahlifar-yellow;
+                    border-bottom: solid 0.25rem $kahlifar-orange;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 3rem;
+        > img {
+            height: 3rem;
+        }
+        &__title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+}

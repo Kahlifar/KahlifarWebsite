@@ -1,4 +1,4 @@
-export const defaultTitle = "Kahlifar"
+export const defaultTitle = "Kahlifar - "
 
 export const defaultFooter = "Kahlifar Community Page"
 

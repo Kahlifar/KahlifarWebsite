@@ -5,7 +5,7 @@
 </template>
 
 <script>
-const { defaultTitle } = require('~/assets/properties')
+const { defaultTitle } = require('~/assets/data/properties')
 export default {
     async asyncData( {$content, params }) {
         const doc = await $content(params.slug || "error").fetch()
@@ -13,7 +13,7 @@ export default {
     },
     head() {
         return {
-            title: `${this.doc.title}${defaultTitle}`,
+            title: `${defaultTitle}${this.doc.title}`,
         };
     },
 }

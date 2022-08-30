@@ -1,4 +1,4 @@
-@import './global/imports.scss';
+@import "./global/imports.scss";
 
 body {
     background-color: $kahlifar-blue;
@@ -13,8 +13,8 @@ body {
 
 html,
 body {
-    >div#__nuxt {
-        >div#__layout {
+    > div#__nuxt {
+        > div#__layout {
             height: 100%;
         }
 
@@ -24,4 +24,23 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $kahlifar-yellow;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $kahlifar-yellow-120;
 }

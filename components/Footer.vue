@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { defaultFooter } from "assets/properties";
+import { defaultFooter } from "~/assets/data/properties";
 export default {
   props: {
     footer: {

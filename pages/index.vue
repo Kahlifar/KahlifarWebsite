@@ -7,7 +7,6 @@
       icon="mic"
       href="http://dc.kahlifar.de"
       target="_blank"
-      :showArrow="true"
     />
 
     <nuxt-content :document="doc" />

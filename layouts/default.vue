@@ -1,5 +1,6 @@
 <template>
     <div class="default-container">
+        <NavBar />
         <nuxt/>
         <Footer />
     </div>
@@ -7,6 +8,5 @@
 
 <script>
 export default {
-    name: "IndexPage",
 }
 </script>
