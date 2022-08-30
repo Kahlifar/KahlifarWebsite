@@ -1,6 +1,7 @@
     // Link styling in Text
     span,
-    p {
+    p, 
+    li {
         >a {
             text-decoration: none;
             color: $kahlifar-yellow;

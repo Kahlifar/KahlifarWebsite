@@ -1,5 +1,6 @@
 <template>
   <div class="team-component">
+    <h2>Owner</h2>
     <div class="team-component__group">
       <ProfileComponent
         username="Fynnyx"
@@ -7,7 +8,7 @@
         role="Discord Owner"
         roleColor="#277490"
         avatar="Fynnyx.gif"
-        :tags="['Bot', 'Cool', 'Bester Owner']"
+        :tags="['Developer', 'VALORANT', 'KLI']"
         :socials="{
           twitter: 'https://twitter.com/Fynnyx',
         }"
@@ -18,11 +19,28 @@
         role="Discord Owner"
         roleColor="#277490"
         avatar="Wolpina.png"
-        :tags="['Bot', 'Cool', 'Bester Owner']"
+        :tags="['Builderin', 'Minecraft', 'KLI']"
         :socials="{
           twitter: 'https://twitter.com/Wolpina_',
         }"
       />
+      <ProfileComponent
+        username="Idefix"
+        discordTag="Idefix#3016"
+        role="Discord Owner"
+        roleColor="#277490"
+        avatar="Idefix.jpg"
+        :tags="['Student', 'PirateGalaxy', 'Judo']"
+        :socials="{}"
+      />
+    </div>
+    <h2>Senior Moderatoren</h2>
+    <div class="team-component__group">
+      <p class="italic">Coming Soon</p>
+    </div>
+    <h2>Moderatoren</h2>
+    <div class="team-component__group">
+      <p class="italic">Coming Soon</p>
     </div>
   </div>
 </template>
