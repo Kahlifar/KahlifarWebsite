@@ -21,7 +21,7 @@
         <LinkButton
           class="light-blue nav-bar__link"
           title="Discord"
-          href="https://dc.kahlifar.de"
+          href="http://dc.kahlifar.de"
           target="_blank"
         />
       </div>
