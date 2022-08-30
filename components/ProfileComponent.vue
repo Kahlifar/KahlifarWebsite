@@ -1,10 +1,8 @@
 <template>
   <div class="profile-component" :style="`--color: ${roleColor}`">
     <div class="profile-component__content">
-      <div class="profile-component__content__image">
-        <img src="~/assets/images/team/profiles/Fynnyx.gif" :alt="`Profile ${username}`"/>
-      </div>
-
+        
+        <img  class="profile-component__content__image" src="~/assets/images/team/profiles/Fynnyx.gif" :alt="`Profile ${username}`"/>
       <div class="profile-component__content__username">
         {{ username }}
       </div>
