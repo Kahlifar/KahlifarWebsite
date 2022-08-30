@@ -1,15 +1,35 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'KahlifarWebpage',
+    title: 'Kahlifar - Community Page',
     htmlAttrs: {
       lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Kahlifar ist eine Community die sich für das zocken interessiert. Minecraft, VALORANT und vieles mehr. Hier findest du garantiert einen Spielpartner.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        property: 'og:title',
+        content: `Kahlifar Communtiy`,
+      },
+      {
+        property: 'og:type',
+        content: `website`,
+      },
+      {
+        property: 'og:description',
+        content: `Kahlifar ist eine Community die sich für das zocken interessiert. Minecraft, VALORANT und vieles mehr. Hier findest du garantiert einen Spielpartner`,
+      },
+      {
+        property: 'og:image',
+        content: '@/assets/images/logo_background.png',
+      },
+      { name: 'msapplication-TileColor', content: '#023047' },
+      { name: 'theme-color', content: '#023047' },
+
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
