@@ -1,15 +1,14 @@
 <template>
-  <nav class="nav-bar">
+  <nav :class="isOpen ? 'nav-bar--open' : '' " class="nav-bar">
     <div class="nav-bar__content">
       <nuxt-link to="/" class="nav-bar__logo">
         <img src="~/assets/images/svg/logo.svg" alt="logo" />
         <span class="nav-bar__logo__title">ahlifar</span>
       </nuxt-link>
       <div
-        :class="isOpen ? '' : 'nav-bar__content--open'"
         class="nav-bar__content__links"
       >
-        <nuxt-link to="/" class="nav-bar__content__links__link">
+        <nuxt-link @click.prevent="isOpen = !isOpen" to="/" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Home</span>
         </nuxt-link>
         <nuxt-link to="/server" class="nav-bar__content__links__link">
@@ -24,14 +23,14 @@
       </div>
 
       <LinkButton
-        class="light-blue nav-bar__link"
+        class="light-blue nav-bar__content__discord-button"
         title="Discord"
         href="http://dc.kahlifar.de"
         target="_blank"
       />
       <button @click.prevent="isOpen = !isOpen" class="nav-bar__burger">
-        <span v-if="isOpen" class="material-icons">menu</span>
-        <span v-if="!isOpen" class="material-icons">close</span>
+        <span v-if="!isOpen" class="material-icons">menu</span>
+        <span v-if="isOpen" class="material-icons">close</span>
       </button>
     </div>
   </nav>
@@ -41,9 +40,7 @@
 export default {
   data() {
     return {
-      isOpen: {
-        default: false,
-      },
+      isOpen: false
     };
   },
 };

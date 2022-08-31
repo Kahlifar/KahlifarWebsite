@@ -40,6 +40,10 @@
                 padding: 0.2rem 0.5rem;
                 color: $black;
                 font-size: 14px;
+                cursor: default;
+                &:hover {
+                    background-color: $kahlifar-blue-40;
+                }
             }
         }
     }
