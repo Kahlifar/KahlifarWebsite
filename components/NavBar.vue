@@ -5,7 +5,10 @@
         <img src="~/assets/images/svg/logo.svg" alt="logo" />
         <span class="nav-bar__logo__title">ahlifar</span>
       </nuxt-link>
-      <div class="nav-bar__content__links">
+      <div
+        :class="isOpen ? '' : 'nav-bar__content--open'"
+        class="nav-bar__content__links"
+      >
         <nuxt-link to="/" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Home</span>
         </nuxt-link>
@@ -18,17 +21,30 @@
         <nuxt-link to="/socials" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Socials</span>
         </nuxt-link>
-        <LinkButton
-          class="light-blue nav-bar__link"
-          title="Discord"
-          href="http://dc.kahlifar.de"
-          target="_blank"
-        />
       </div>
+
+      <LinkButton
+        class="light-blue nav-bar__link"
+        title="Discord"
+        href="http://dc.kahlifar.de"
+        target="_blank"
+      />
+      <button @click.prevent="isOpen = !isOpen" class="nav-bar__burger">
+        <span v-if="isOpen" class="material-icons">menu</span>
+        <span v-if="!isOpen" class="material-icons">close</span>
+      </button>
     </div>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isOpen: {
+        default: false,
+      },
+    };
+  },
+};
 </script>
