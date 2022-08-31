@@ -8,6 +8,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: "google-site-verification", content: "B5LbS7mhVb68dbwfoDL8nVceufZrOaAN7LxRLFLdmRU" },
       { hid: 'description', name: 'description', content: 'Kahlifar ist eine Community die sich für das zocken interessiert. Minecraft, VALORANT und vieles mehr. Hier findest du garantiert einen Spielpartner.' },
       { name: 'format-detection', content: 'telephone=no' },
       {
@@ -24,7 +25,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: '@/assets/images/logo_background.png',
+        content: '~/assets/images/logo_background.png',
       },
       { name: 'msapplication-TileColor', content: '#023047' },
       { name: 'theme-color', content: '#023047' },
