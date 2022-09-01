@@ -17,59 +17,58 @@ $transition-duration: 0.2s;
     }
     border-radius: 6px;
     width: fit-content;
-}
-
-.blue {
-    background-color: $kahlifar-blue;
-    border: solid $border-thickness $kahlifar-blue-120;
-    color: $white;
-
-    &:hover {
-        background-color: $kahlifar-blue-80;
-        border: solid $border-thickness $kahlifar-blue-90;
+    &.blue {
+        background-color: $kahlifar-blue;
+        border: solid $border-thickness $kahlifar-blue-120;
+        color: $white;
+    
+        &:hover {
+            background-color: $kahlifar-blue-80;
+            border: solid $border-thickness $kahlifar-blue-90;
+        }
     }
-}
-
-.light-blue {
-    background-color: $kahlifar-light-blue-80;
-    border: solid $border-thickness $kahlifar-light-blue;
-    color: $white;
-
-    &:hover {
-        background-color: $kahlifar-light-blue;
-        border: solid $border-thickness $kahlifar-light-blue-120;
+    
+    &.light-blue {
+        background-color: $kahlifar-light-blue-80;
+        border: solid $border-thickness $kahlifar-light-blue;
+        color: $white;
+    
+        &:hover {
+            background-color: $kahlifar-light-blue;
+            border: solid $border-thickness $kahlifar-light-blue-120;
+        }
     }
-}
-
-.sky-blue {
-    background-color: $kahlifar-sky-blue-80;
-    border: solid $border-thickness $kahlifar-sky-blue;
-    color: $black;
-
-    &:hover {
-        background-color: $kahlifar-sky-blue;
-        border: solid $border-thickness $kahlifar-sky-blue-120;
+    
+    &.sky-blue {
+        background-color: $kahlifar-sky-blue-80;
+        border: solid $border-thickness $kahlifar-sky-blue;
+        color: $black;
+    
+        &:hover {
+            background-color: $kahlifar-sky-blue;
+            border: solid $border-thickness $kahlifar-sky-blue-120;
+        }
     }
-}
-
-.yellow {
-    background-color: $kahlifar-yellow-80;
-    border: solid $border-thickness $kahlifar-yellow;
-    color: $black;
-
-    &:hover {
-        background-color: $kahlifar-yellow;
-        border: solid $border-thickness $kahlifar-yellow-120;
+    
+    &.yellow {
+        background-color: $kahlifar-yellow-80;
+        border: solid $border-thickness $kahlifar-yellow;
+        color: $black;
+    
+        &:hover {
+            background-color: $kahlifar-yellow;
+            border: solid $border-thickness $kahlifar-yellow-120;
+        }
     }
-}
-
-.orange {
-    background-color: $kahlifar-orange-80;
-    border: solid $border-thickness $kahlifar-orange;
-    color: $white;
-
-    &:hover {
-        background-color: $kahlifar-orange;
-        border: solid $border-thickness $kahlifar-orange-120;
+    
+    .orange {
+        background-color: $kahlifar-orange-80;
+        border: solid $border-thickness $kahlifar-orange;
+        color: $white;
+    
+        &:hover {
+            background-color: $kahlifar-orange;
+            border: solid $border-thickness $kahlifar-orange-120;
+        }
     }
 }
