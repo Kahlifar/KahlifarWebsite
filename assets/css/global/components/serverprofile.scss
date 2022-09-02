@@ -1,0 +1,75 @@
+.server-profile {
+    background-color: $kahlifar-red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    margin: 1rem 1.5rem;
+    &__content {
+        margin-right: 2rem;
+        &__subtitle {
+            margin-bottom: -0.5rem;
+        }
+        > p {
+            white-space: wrap;
+        }
+    }
+    &__game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+
+        &__image {
+            width: 6rem;
+            height: 6rem;
+            object-fit: scale-down;
+        }
+        &__name {
+            white-space: nowrap;
+        }
+        &__version {
+            white-space: nowrap;
+        }
+    }
+    &.blue {
+        background-color: $kahlifar-blue;
+    }
+    &.light-blue {
+        background-color: $kahlifar-light-blue;
+    }
+    &.sky-blue {
+        background-color: $kahlifar-sky-blue;
+    }
+    &.yellow {
+        background-color: $kahlifar-yellow;
+    }
+    &.orange {
+        background-color: $kahlifar-orange;
+    }
+    &.red {
+        background-color: $kahlifar-red;
+    }
+
+    a {
+        color: $black;
+    }
+    @media screen and (max-width: $sm-max) {
+        flex-direction: column;
+        .server-profile {
+            &__content {
+                order: 2;
+                &__title {
+                    margin-top: 0;
+                }
+            }
+            &__game {
+                order: 1;
+                &__image {
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.profile-component {
+    background-color: $kahlifar-sky-blue;
+    border-radius: 10px;
+    width: 14rem;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        &__image {
+            align-self: center;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 75%;
+            display: block;
+            object-fit: cover;
+            border: solid 5px var(--color);
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+        &__username {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &__discordtag {
+            font-style: italic;
+            font-size: 14px;
+        }
+        &__tags {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            gap: 0.5rem;
+            &__tag {
+                display: flex;
+                background-color: $kahlifar-blue-20;
+                border-radius: 10px;
+                padding: 0.2rem 0.5rem;
+                color: $black;
+                font-size: 14px;
+                cursor: default;
+                &:hover {
+                    background-color: $kahlifar-blue-40;
+                }
+            }
+        }
+    }
+}

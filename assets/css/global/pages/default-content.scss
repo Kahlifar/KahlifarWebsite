@@ -3,13 +3,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem;
+    margin: 0 10rem;
 
     h1 {
         letter-spacing: 1px;
     }
 
     .material-icons {
-        font-size: $font-size-normal + 3px;
+        font-size: $font-size-normal;
+    }
+    @media screen and (max-width: $sm-max) {
+        margin: 2rem;
     }
 }

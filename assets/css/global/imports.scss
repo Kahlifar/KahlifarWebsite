@@ -6,13 +6,19 @@
 @import './variables/font.scss';
 
 // General
+@import './general/code.scss';
 @import './general/links.scss';
 @import './general/modifier.scss';
+@import './general/table.scss';
 
 // Components
 @import './components/footer.scss';
 @import './components/linkbutton.scss';
-// @import './components/navbar.scss';
+@import './components/navbar.scss';
+@import './components/profilecomponent.scss';
+@import './components/serverprofile.scss';
+@import './components/socialcard.scss';
+@import './components/teamcomponent.scss';
 @import './components/typewriter.scss';
 
 // Pages

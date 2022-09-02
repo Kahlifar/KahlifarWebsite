@@ -1,0 +1,111 @@
+.nav-bar {
+    height: 5rem;
+    background-color: $kahlifar-blue-120;
+    box-shadow: 8px 0 10px -2px $kahlifar-light-blue;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 1.5rem;
+        width: 100%;
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+        &__links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 1.5rem;
+                height: 5rem;
+                font-size: 16px;
+
+                &:hover {
+                    background-color: $kahlifar-yellow;
+                    border-bottom: solid 0.25rem $kahlifar-orange;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .link-button {
+            margin-left: auto;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        margin-right: 3rem;
+        > img {
+            height: 3rem;
+        }
+        &__title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: $white;
+        }
+    }
+    &__burger {
+        display: none;
+    }
+    @media screen and (max-width: $sm-max) {
+        height: 4rem;
+        &--open {
+            height: auto;
+
+            .nav-bar {
+                &__content {
+                    margin-top: 0.7rem;
+                    flex-wrap: wrap;
+                    &__links {
+                        display: flex;
+                        flex-direction: column;
+                        order: 4;
+                        width: 100%;
+                        margin-top: 0.7rem;
+                        &__link {
+                            width: 100%;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__content {
+            &__links {
+                display: none;
+                float: right;
+                &__link {
+                    padding: 1rem 1rem;
+                    height: auto;
+                }
+            }
+        }
+        &__logo {
+            margin-right: 0;
+            > img {
+                height: 2rem;
+            }
+            &__title {
+                font-size: 2rem;
+            }
+        }
+        &__burger {
+            display: flex;
+            font-size: 30px;
+            color: $white;
+            background-color: transparent;
+            border: none;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+    }
+}

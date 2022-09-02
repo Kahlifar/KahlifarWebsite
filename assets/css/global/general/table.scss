@@ -1,0 +1,52 @@
+table {
+    // display: block;
+    // overflow-x: auto;
+    white-space: nowrap;
+    border-spacing: 0;
+    // width: 100%;
+    padding: 1rem 0;
+    thead {
+        // display: table;
+        // width: 100%;
+        tr {
+            th {
+                font-weight: bold;
+                text-align: left;
+                padding: 0.5rem;
+                padding-left: 0.2rem;
+                border: 2px solid $white;
+                border-top: none;
+            }
+        }
+    }
+    tbody {
+        // display: table;
+        // width: 100%;
+        tr {
+            td {
+                padding: 0.5rem 0.5rem;
+                border: 1px solid $white;
+            }
+        }
+    }
+}
+
+div.table {
+    &--scrollable {
+        width: 100%;
+        .table__content {
+            overflow-x: scroll;
+            // width: calc(100% - 5%);
+            width: 100%;
+
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $sm-max) {
+            width: 97.5vw;
+        }
+    }
+}

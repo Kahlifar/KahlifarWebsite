@@ -1,13 +1,15 @@
-    // Link styling in Text
-    span,
-    p {
-        >a {
-            text-decoration: none;
-            color: $kahlifar-yellow;
-            font-weight: bold;
+// Link styling in Text
+span,
+td,
+p,
+li {
+    > a {
+        text-decoration: none;
+        color: $kahlifar-yellow;
+        font-weight: bold;
 
-            &:hover {
-                text-decoration: underline;
-            }
+        &:hover {
+            text-decoration: underline;
         }
     }
+}

@@ -43,7 +43,7 @@ export default {
     },
     showArrow: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   methods: {

@@ -1,15 +1,38 @@
+import {discordInviteLink, instagramLink, youtubeLink, twitterLink, esportInviteLink, topggLink} from './assets/data/properties'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'KahlifarWebpage',
+    title: 'Kahlifar - Community Page',
     htmlAttrs: {
       lang: 'de'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: "google-site-verification", content: "B5LbS7mhVb68dbwfoDL8nVceufZrOaAN7LxRLFLdmRU" },
+      { hid: 'description', name: 'description', content: 'Kahlifar ist eine Community die sich für das zocken interessiert. Minecraft, VALORANT und vieles mehr. Hier findest du garantiert einen Spielpartner.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        property: 'og:title',
+        content: `Kahlifar Communtiy`,
+      },
+      {
+        property: 'og:type',
+        content: `website`,
+      },
+      {
+        property: 'og:description',
+        content: `Kahlifar ist eine Community die sich für das zocken interessiert. Minecraft, VALORANT und vieles mehr. Hier findest du garantiert einen Spielpartner`,
+      },
+      {
+        property: 'og:image',
+        content: '~/assets/images/logo_background.png',
+      },
+      { name: 'msapplication-TileColor', content: '#023047' },
+      { name: 'theme-color', content: '#023047' },
+
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -36,13 +59,35 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxt/content',
-    // 'vue-typer',
+    '@nuxtjs/axios',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/redirect-module',
   ],
 
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
+  sitemap: {
+    hostname: 'https://kahlifar.de',
+    gzip: true,
+    exclude: [
+      '/admin/**'
+    ],
+    routes: [
+      '/server',
+      '/team',
+      '/socials',
+    ]
+  },
+  redirect: [
+    {from: '/discord',    to: discordInviteLink },
+    {from: '/instagram',  to: instagramLink },
+    {from: '/youtube',    to: youtubeLink },
+    {from: '/twitter',    to: twitterLink },
+    {from: '/topgg',      to: topggLink },
+    {from: '/esport',     to: esportInviteLink },
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

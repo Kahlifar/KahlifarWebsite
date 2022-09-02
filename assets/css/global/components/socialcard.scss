@@ -1,0 +1,51 @@
+.social-card {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 2px $black-80;
+    border-bottom: solid 2px $black-80;
+    padding: 1.5rem 1rem;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+        &__head {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            > img {
+                width: 70px;
+            }
+            &__title {
+                font-size: 23px;
+                font-weight: bold;
+                margin-left: 1.5rem;
+                padding-top: 7px;
+                white-space: nowrap;
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+    @media screen and (max-width: $sm-max) {
+        flex-direction: column;
+        &__content {
+            margin-right: 0;
+            &__head {
+                flex-direction: column;
+                align-items: flex-start;
+                > img {
+                    width: 100px;
+                }
+                &__title {
+                    font-size: 100%;
+                    margin-left: 0;
+                    padding-top: 7px;
+                    white-space: wrap;
+                }
+            }
+        }
+    }
+}
