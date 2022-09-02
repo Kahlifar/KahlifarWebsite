@@ -8,7 +8,7 @@ Die Community hat verschiedene Server. Manche Server/Projekte bleiben für etwas
 Von Vanilla Minecraft über Modded Minecraft bishin zu ARK Servern hatten wir schon alles. Erhalte hier alle nötigen Informationen um mitzuspielen.
 
 <server-profile
-    class="red"
+    class="orange"
     title="Kahlifar Minecraft"
     description="Der Server ist ein Open-World Survival Server, welcher immer auf der neuesten Version läuft.
     Es gibt viele Plugins die das Spielerlebnis verändern. So gibt es zum Beispiel ein Elytra Plugin, ein TPA Plugin und noch viele mehr.
