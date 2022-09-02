@@ -4,9 +4,9 @@ title: "Socials"
 # Socials
 
 Unsere Community ist auf verschiedensten Platformen vertreten. Wir teilen Bilder oder einfach tolle News. 
-So können wir neue Member erreiche und das Erlebnis in der Community noch besser machen.
+So können wir neue Member erreichen und das Erlebnis in der Community noch besser machen.
 
-**Hilf uns zu wachsen und folgen alles Kanälen**
+**Hilf uns zu wachsen und folgen allen Kanälen**
 
 <br>
 <br>
@@ -47,6 +47,6 @@ So können wir neue Member erreiche und das Erlebnis in der Community noch besse
     platform-name="Instagram"
     account-name="@kahlifar_"
     button-theme="orange"
-    link="/youtube"
+    link="/instagram"
     description="Auf dem Instagram Kanal werden wir in kurzen Abständen Bilder oder Clips aus der Community teilen.">
 </social-card>
