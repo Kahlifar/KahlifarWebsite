@@ -2,6 +2,14 @@ $border-thickness: 4px;
 $transition-duration: 0.2s;
 
 .link-button {
+    background-color: $kahlifar-light-blue-80;
+        border: solid $border-thickness $kahlifar-light-blue;
+        color: $white;
+    
+        &:hover {
+            background-color: $kahlifar-light-blue;
+            border: solid $border-thickness $kahlifar-light-blue-120;
+        }
     &__link {
         color: $white;
         display: flex;
@@ -17,6 +25,7 @@ $transition-duration: 0.2s;
     }
     border-radius: 6px;
     width: fit-content;
+    height: max-content;
     &.blue {
         background-color: $kahlifar-blue;
         border: solid $border-thickness $kahlifar-blue-120;
@@ -61,7 +70,7 @@ $transition-duration: 0.2s;
         }
     }
     
-    .orange {
+    &.orange {
         background-color: $kahlifar-orange-80;
         border: solid $border-thickness $kahlifar-orange;
         color: $white;
@@ -71,4 +80,16 @@ $transition-duration: 0.2s;
             border: solid $border-thickness $kahlifar-orange-120;
         }
     }
+
+    &.red {
+        background-color: $kahlifar-red;
+        border: solid $border-thickness $kahlifar-red-120;
+        color: $white;
+    
+        &:hover {
+            background-color: $kahlifar-red-120;
+            border: solid $border-thickness $kahlifar-red;
+        }
+    }
+
 }

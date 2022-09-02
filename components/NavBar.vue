@@ -25,7 +25,7 @@
       <LinkButton
         class="light-blue nav-bar__content__discord-button"
         title="Discord"
-        href="http://dc.kahlifar.de"
+        href="/discord"
         target="_blank"
       />
       <button @click.prevent="isOpen = !isOpen" class="nav-bar__burger">

@@ -162,7 +162,7 @@ Von Vanilla Minecraft über Modded Minecraft bishin zu ARK Servern hatten wir sc
 <server-profile
     class="light-blue"
     title="Community Discord"
-    description="Über den Discord drhet sich alles. Hier hast du Platz um mit Freunden zu reden und neue Freunde zu finden.
+    description="Über den Discord dreht sich alles. Hier hast du Platz um mit Freunden zu reden und neue Freunde zu finden.
     In den Text-Channel findest immer einen Platz zum reden oder über lustige Memes zu lachen.
     <br>
     Auf dem Discord Server findest du immer einen Mitspieler zum spielen. Von Minecraft über VALORANT hin zu Pummel Party ist alles dabei.

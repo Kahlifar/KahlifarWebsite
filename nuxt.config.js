@@ -1,3 +1,5 @@
+import {discordInviteLink, instagramLink, youtubeLink, twitterLink, esportInviteLink, topggLink} from './assets/data/properties'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -59,6 +61,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
+    '@nuxtjs/redirect-module',
   ],
 
   axios: {
@@ -77,6 +80,14 @@ export default {
       '/socials',
     ]
   },
+  redirect: [
+    {from: '/discord',    to: discordInviteLink },
+    {from: '/instagram',  to: instagramLink },
+    {from: '/youtube',    to: youtubeLink },
+    {from: '/twitter',    to: twitterLink },
+    {from: '/topgg',      to: topggLink },
+    {from: '/esport',     to: esportInviteLink },
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
