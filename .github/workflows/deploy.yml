@@ -1,8 +1,10 @@
 name: Deployment
 on:
-  push:
+  pull-request:
     branches:
       - staging
+    paths-ignore: 
+      - '.github/workflows/**'
   workflow_dispatch:
 jobs:
   deploy:
@@ -20,7 +22,6 @@ jobs:
           pm2 start website
       - uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          local-dir: ./dist/
           server-dir: /var/www/html/website/KahlifarWebsite/
           state-name: .htsync
           server: kahlifar.de
