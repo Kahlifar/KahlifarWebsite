@@ -1,0 +1,29 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - staging
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: debian-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "npm"
+      - name: Build
+        run: |
+          npm install
+          npm run build
+          pm2 start website
+      - uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          local-dir: ./dist/
+          server-dir: /var/www/html/website/KahlifarWebsite/
+          state-name: .htsync
+          server: kahlifar.de
+          port: 21
+          username: root
+          password: ${{ secrets.FTP_PASSWORD }}
