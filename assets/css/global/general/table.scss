@@ -35,7 +35,6 @@ div.table {
     &--scrollable {
         width: 100%;
         .table__content {
-            border: 1px solid red;
             overflow-x: scroll;
             // width: calc(100% - 5%);
             width: 100%;
