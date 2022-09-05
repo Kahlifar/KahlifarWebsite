@@ -33,7 +33,7 @@ So können wir neue Member erreichen und das Erlebnis in der Community noch bess
 </social-card>
 <social-card
     platform-logo="youtube.svg"
-    platform-name="YoutTube"
+    platform-name="YouTube"
     account-name="Kahlifar"
     button-theme="red"
     link="/youtube"
@@ -43,6 +43,14 @@ So können wir neue Member erreichen und das Erlebnis in der Community noch bess
     Auch werden wir immer wieder den Bauprozess in ein Showcase packen.">
 </social-card>
 <social-card
+    platform-logo="twitch.svg"
+    platform-name="Twitch"
+    account-name="ttv/kahlifar"
+    button-theme="purple"
+    link="/twitch"
+    description="Livestreams ist immer ein guter Austausch mit der Community.">
+</social-card>
+<social-card
     platform-logo="instagram.svg"
     platform-name="Instagram"
     account-name="@kahlifar_"
@@ -50,3 +58,6 @@ So können wir neue Member erreichen und das Erlebnis in der Community noch bess
     link="/instagram"
     description="Auf dem Instagram Kanal werden wir in kurzen Abständen Bilder oder Clips aus der Community teilen.">
 </social-card>
+
+<br>
+<br>
