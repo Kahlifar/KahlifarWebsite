@@ -48,7 +48,7 @@ So können wir neue Member erreichen und das Erlebnis in der Community noch bess
     account-name="ttv/kahlifar"
     button-theme="purple"
     link="/twitch"
-    description="Livestreams ist immer ein guter Austausch mit der Community.">
+    description="Livestreams sind immer ein guter Austausch mit der Community.">
 </social-card>
 <social-card
     platform-logo="instagram.svg"
