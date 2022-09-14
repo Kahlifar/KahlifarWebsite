@@ -19,7 +19,7 @@ Ohne diese Hilfe wäre das ganze nicht möglich gewesen und erst Recht nicht ohn
 ### <u>bis September 2022</u>
 
 - [Bastiii_502]()
-- [duckq_]()
+- [duckq_](https://www.reddit.com/user/QuackyDoo)
 - [Kekspanda]()
-- [twix]()
-- [xElias]()
+- [twix](https://www.instagram.com/berlin_leon_1/)
+- [xElias](https://www.instagram.com/xelias_e46/)
