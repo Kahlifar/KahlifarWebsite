@@ -14,7 +14,7 @@
       />
       <DiscordProfileComponent
         userid="751097780004585483"
-        :tags="['Builderin', 'Minecraft', 'KLI']"
+        :tags="['Builderin', 'Minecraft', 'OG']"
         class="owner"
       />
     </div>
@@ -22,7 +22,7 @@
     <div class="team-component__group">
       <DiscordProfileComponent
         userid="740650325051965511"
-        :tags="[]"
+        :tags="['Minecrat', 'OG']"
         class="senmoderator"
       />
     </div>
@@ -30,7 +30,7 @@
     <div class="team-component__group">
       <DiscordProfileComponent
         userid="493038652126003200"
-        :tags="[]"
+        :tags="['VALORANT', 'KLI', 'OG']"
         class="moderator"
       />
       <DiscordProfileComponent
