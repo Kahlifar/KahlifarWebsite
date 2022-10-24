@@ -12,7 +12,7 @@
         >
         <div
           class="social-card__content__head__badges">
-            <Badge text="Live" />
+            <Badge v-if="live && isLive" text="Live" firstIcon="circle" type="live" ></Badge>
         </div>
       </div>
       <p
@@ -33,7 +33,13 @@
 
 <script>
 import { marked } from "marked";
+import { isLive } from "~/helpers/twitch/isLive"
 export default {
+  data() {
+    return {
+      isLive: false,
+    };
+  },
   props: {
     platformLogo: {
       type: String,
@@ -69,6 +75,12 @@ export default {
       return marked.parseInline(text, { breaks: true });
     },
   },
+  async fetch() {
+    if (this.live) {
+      const response = await isLive(this.live.channel);
+      this.isLive = response
+    }
+  }
 };
 </script>
 

@@ -29,6 +29,10 @@
         margin-left: auto;
         align-items: center;
     }
+
+    .badge {
+        margin-top: 7px;
+    }
     @media screen and (max-width: $sm-max) {
         flex-direction: column;
         &__content {
@@ -45,6 +49,12 @@
                     padding-top: 7px;
                     white-space: wrap;
                 }
+            }
+        }
+
+        .badge {
+            &__text {
+                font-size: 100%;
             }
         }
     }
