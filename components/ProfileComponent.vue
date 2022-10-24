@@ -1,7 +1,6 @@
 <template>
   <div class="profile-component" :style="`--color: ${roleColor}`">
     <div class="profile-component__content">
-        
         <img  class="profile-component__content__image" :src="require(`~/assets/images/team/profiles/${avatar}`)" :alt="`Profile ${username}`"/>
       <div class="profile-component__content__username">
         {{ username }}

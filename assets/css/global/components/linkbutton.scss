@@ -3,13 +3,13 @@ $transition-duration: 0.2s;
 
 .link-button {
     background-color: $kahlifar-light-blue-80;
-        border: solid $border-thickness $kahlifar-light-blue;
-        color: $white;
-    
-        &:hover {
-            background-color: $kahlifar-light-blue;
-            border: solid $border-thickness $kahlifar-light-blue-120;
-        }
+    border: solid $border-thickness $kahlifar-light-blue;
+    color: $white;
+
+    &:hover {
+        background-color: $kahlifar-light-blue;
+        border: solid $border-thickness $kahlifar-light-blue-120;
+    }
     &__link {
         color: $white;
         display: flex;
@@ -30,54 +30,54 @@ $transition-duration: 0.2s;
         background-color: $kahlifar-blue;
         border: solid $border-thickness $kahlifar-blue-120;
         color: $white;
-    
+
         &:hover {
-            background-color: $kahlifar-blue-80;
-            border: solid $border-thickness $kahlifar-blue-90;
+            background-color: $kahlifar-blue-120;
+            // border: solid $border-thickness $kahlifar-blue-90;
         }
     }
-    
+
     &.light-blue {
-        background-color: $kahlifar-light-blue-80;
-        border: solid $border-thickness $kahlifar-light-blue;
+        background-color: $kahlifar-light-blue;
+        border: solid $border-thickness $kahlifar-light-blue-120;
         color: $white;
-    
+
         &:hover {
-            background-color: $kahlifar-light-blue;
-            border: solid $border-thickness $kahlifar-light-blue-120;
+            background-color: $kahlifar-light-blue-120;
+            // border: solid $border-thickness $kahlifar-light-blue-120;
         }
     }
-    
+
     &.sky-blue {
-        background-color: $kahlifar-sky-blue-80;
-        border: solid $border-thickness $kahlifar-sky-blue;
+        background-color: $kahlifar-sky-blue;
+        border: solid $border-thickness $kahlifar-sky-blue-120;
         color: $black;
-    
+
         &:hover {
-            background-color: $kahlifar-sky-blue;
-            border: solid $border-thickness $kahlifar-sky-blue-120;
+            background-color: $kahlifar-sky-blue-120;
+            // border: solid $border-thickness $kahlifar-sky-blue-120;
         }
     }
-    
+
     &.yellow {
-        background-color: $kahlifar-yellow-80;
-        border: solid $border-thickness $kahlifar-yellow;
+        background-color: $kahlifar-yellow;
+        border: solid $border-thickness $kahlifar-yellow-120;
         color: $black;
-    
+
         &:hover {
-            background-color: $kahlifar-yellow;
-            border: solid $border-thickness $kahlifar-yellow-120;
+            background-color: $kahlifar-yellow-120;
+            // border: solid $border-thickness $kahlifar-yellow-120;
         }
     }
-    
+
     &.orange {
-        background-color: $kahlifar-orange-80;
-        border: solid $border-thickness $kahlifar-orange;
+        background-color: $kahlifar-orange;
+        border: solid $border-thickness $kahlifar-orange-120;
         color: $white;
-    
+
         &:hover {
-            background-color: $kahlifar-orange;
-            border: solid $border-thickness $kahlifar-orange-120;
+            background-color: $kahlifar-orange-120;
+            // border: solid $border-thickness $kahlifar-orange-120;
         }
     }
 
@@ -85,11 +85,21 @@ $transition-duration: 0.2s;
         background-color: $kahlifar-red;
         border: solid $border-thickness $kahlifar-red-120;
         color: $white;
-    
+
         &:hover {
             background-color: $kahlifar-red-120;
-            border: solid $border-thickness $kahlifar-red;
+            // border: solid $border-thickness $kahlifar-red-120;
         }
     }
 
+    &.purple {
+        background-color: $kahlifar-purple;
+        border: solid $border-thickness $kahlifar-purple-120;
+        color: $white;
+
+        &:hover {
+            background-color: $kahlifar-purple-120;
+            // border: solid $border-thickness $kahlifar-purple;
+        }
+    }
 }
