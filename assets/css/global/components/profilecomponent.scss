@@ -2,6 +2,8 @@
     background-color: $kahlifar-sky-blue;
     border-radius: 10px;
     width: 14rem;
+    min-height: 272.75px;
+    height: 100%;
     &__content {
         display: flex;
         flex-direction: column;
@@ -22,6 +24,7 @@
         &__username {
             font-weight: bold;
             font-size: 16px;
+            white-space: nowrap;
         }
         &__discordtag {
             font-style: italic;
@@ -44,6 +47,33 @@
                 &:hover {
                     background-color: $kahlifar-blue-40;
                 }
+            }
+        }
+    }
+    &.owner {
+        background-color: $kahlifar-sky-blue;
+        .profile-component__content__tags__tag {
+            background-color: $kahlifar-blue-20;
+            &:hover {
+                background-color: $kahlifar-blue-40;
+            }
+        }
+    }
+    &.senmoderator {
+        background-color: $kahlifar-blue-80;
+        .profile-component__content__tags__tag {
+            background-color: $kahlifar-light-blue-20;
+            &:hover {
+                background-color: $kahlifar-light-blue-40;
+            }
+        }
+    }
+    &.moderator {
+        background-color: $kahlifar-blue-80;
+        .profile-component__content__tags__tag {
+            background-color: $kahlifar-blue-20;
+            &:hover {
+                background-color: $kahlifar-blue-40;
             }
         }
     }

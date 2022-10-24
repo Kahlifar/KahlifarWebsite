@@ -2,45 +2,52 @@
   <div class="team-component">
     <h2>Owner</h2>
     <div class="team-component__group">
-      <ProfileComponent
-        username="Fynnyx"
-        discordTag="Fynnyx#4024"
-        role="Discord Owner"
-        roleColor="#277490"
-        avatar="Fynnyx.gif"
+      <DiscordProfileComponent
+        userid="451776092785737728"
         :tags="['Developer', 'VALORANT', 'KLI']"
-        :socials="{
-          twitter: 'https://twitter.com/Fynnyx',
-        }"
+        class="owner"
       />
-      <ProfileComponent
-        username="Wolpina"
-        discordTag="Wolpina#3008"
-        role="Discord Owner"
-        roleColor="#277490"
-        avatar="Wolpina.png"
-        :tags="['Builderin', 'Minecraft', 'KLI']"
-        :socials="{
-          twitter: 'https://twitter.com/Wolpina_',
-        }"
+      <DiscordProfileComponent
+        userid="270932032945651714"
+        :tags="['AOE', 'PirateGalaxy', 'Minecraft']"
+        class="owner"
       />
-      <ProfileComponent
-        username="Idefix"
-        discordTag="Idefix#3016"
-        role="Discord Owner"
-        roleColor="#277490"
-        avatar="Idefix.jpg"
-        :tags="['Student', 'PirateGalaxy', 'Judo']"
-        :socials="{}"
+      <DiscordProfileComponent
+        userid="751097780004585483"
+        :tags="['Builderin', 'Minecraft', 'OG']"
+        class="owner"
       />
     </div>
     <h2>Senior Moderatoren</h2>
     <div class="team-component__group">
-      <p class="italic">Coming Soon</p>
+      <DiscordProfileComponent
+        userid="740650325051965511"
+        :tags="['Minecrat', 'OG']"
+        class="senmoderator"
+      />
     </div>
     <h2>Moderatoren</h2>
     <div class="team-component__group">
-      <p class="italic">Coming Soon</p>
+      <DiscordProfileComponent
+        userid="493038652126003200"
+        :tags="['VALORANT', 'KLI', 'OG']"
+        class="moderator"
+      />
+      <DiscordProfileComponent
+        userid="793477392479420417"
+        :tags="['Valorant', 'KLI' ,'Content Creator']"
+        class="moderator"
+      />
+      <DiscordProfileComponent
+        userid="544882215352401922"
+        :tags="['Minecraft', 'Valorant', 'Chill']"
+        class="moderator"
+      />
+      <DiscordProfileComponent
+        userid="795689216956301343"
+        :tags="['Minecraft', 'Sims4', 'hilfsbereit']"
+        class="moderator"
+      />
     </div>
   </div>
 </template>

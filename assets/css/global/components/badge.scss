@@ -1,0 +1,21 @@
+.badge {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 20px;
+    align-self: center;
+
+    &__text {
+        margin: 0 0.25rem;
+    }
+}
+
+.live {
+    background-color: $kahlifar-red;
+}
+
+.youtube {
+    background-color: $white;
+    color: $kahlifar-red;
+}

@@ -1,4 +1,4 @@
-import {discordInviteLink, instagramLink, youtubeLink, twitterLink, twitchLink, esportInviteLink, topggLink} from './assets/data/properties'
+import { discordInviteLink, instagramLink, youtubeLink, twitterLink, twitchLink, esportInviteLink, topggLink } from './assets/data/properties'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -45,8 +45,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,13 +54,18 @@ export default {
   buildModules: [
   ],
 
+  serverMiddleware: [
+    { path: '/api/discord', handler: '~/api/discordAPI.js' }
+  ],
+
+
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
     '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    '@nuxtjs/redirect-module',
+    '@nuxtjs/redirect-module'
   ],
 
   axios: {
@@ -86,15 +90,14 @@ export default {
     ]
   },
   redirect: [
-    {from: '/discord',    to: discordInviteLink },
-    {from: '/instagram',  to: instagramLink },
-    {from: '/youtube',    to: youtubeLink },
-    {from: '/twitter',    to: twitterLink },
-    {from: '/twitch',     to: twitchLink },
-    {from: '/topgg',      to: topggLink },
-    {from: '/esport',     to: esportInviteLink },
+    { from: '/discord', to: discordInviteLink },
+    { from: '/instagram', to: instagramLink },
+    { from: '/youtube', to: youtubeLink },
+    { from: '/twitter', to: twitterLink },
+    { from: '/twitch', to: twitchLink },
+    { from: '/topgg', to: topggLink },
+    { from: '/esport', to: esportInviteLink },
   ],
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
