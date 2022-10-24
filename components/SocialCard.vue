@@ -10,6 +10,10 @@
         <span class="social-card__content__head__title"
           >{{ platformName }}: {{ accountName }}</span
         >
+        <div
+          class="social-card__content__head__badges">
+            <Badge text="Live" />
+        </div>
       </div>
       <p
         class="social-card__content__description"
@@ -55,6 +59,10 @@ export default {
       type: String,
       required: true,
     },
+    live: {
+      type: Object,
+      required: false,
+    }
   },
   methods: {
     parseToMarkdown(text) {
