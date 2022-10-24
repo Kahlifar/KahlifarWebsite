@@ -1,9 +1,9 @@
 <template>
   <span class="badge"
-    :class="style">
-    <span v-if="firstIcon" class="badge__first-icon material-icons"></span>
+    :class="type">
+    <span v-if="firstIcon" class="badge__first-icon material-icons">{{ firstIcon }}</span>
     <span class="badge__text">{{ text }}</span>
-    <span v-if="secondIcon" class="badge__last-icon material-icons"></span>
+    <span v-if="secondIcon" class="badge__last-icon material-icons">{{ secondIcon }}</span>
   </span>
 </template>
 
@@ -22,7 +22,7 @@ export default {
             type: String,
             required: false
         },
-        style: {
+        type: {
             type: String,
             required: false
         }
