@@ -17,7 +17,7 @@
         :alt="`Profile ${memberData.user.username}`"
       />
       <span class="profile-component__content__username">
-        {{ memberData.nick }}
+        {{ memberData.nick ? memberData.nick : memberData.user.username }}
       </span>
       <span class="profile-component__content__discordtag">
         {{ memberData.user.username }}#{{ memberData.user.discriminator }}
@@ -62,7 +62,7 @@ export default {
   },
   async fetch() {
     const response = await this.$axios.get(
-      `http://localhost:3000/api/discord/members?userId=${this.userid}`
+      `https://kahlifar.de/api/discord/members?userId=${this.userid}`
     );
     this.memberData = response.data;
     this.memberData.topRole = await getTopRole(this.memberData);
