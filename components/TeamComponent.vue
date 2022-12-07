@@ -21,9 +21,14 @@
     <h2>Senior Moderatoren</h2>
     <div class="team-component__group">
       <DiscordProfileComponent
-        userid="740650325051965511"
-        :tags="['Minecrat', 'OG']"
-        class="senmoderator"
+        userid="793477392479420417"
+        :tags="['Valorant', 'KLI', 'Content Creator']"
+        class="moderator"
+      />
+      <DiscordProfileComponent
+        userid="544882215352401922"
+        :tags="['Minecraft', 'Valorant', 'Chill']"
+        class="moderator"
       />
     </div>
     <h2>Moderatoren</h2>
@@ -34,14 +39,9 @@
         class="moderator"
       />
       <DiscordProfileComponent
-        userid="793477392479420417"
-        :tags="['Valorant', 'KLI' ,'Content Creator']"
-        class="moderator"
-      />
-      <DiscordProfileComponent
-        userid="544882215352401922"
-        :tags="['Minecraft', 'Valorant', 'Chill']"
-        class="moderator"
+        userid="740650325051965511"
+        :tags="['Minecraft', 'OG']"
+        class="senmoderator"
       />
       <DiscordProfileComponent
         userid="795689216956301343"

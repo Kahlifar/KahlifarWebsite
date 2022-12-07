@@ -14,12 +14,12 @@
         <nuxt-link to="/server" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Server</span>
         </nuxt-link>
-        <nuxt-link to="/team" class="nav-bar__content__links__link">
+        <a href="/team" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Team</span>
-        </nuxt-link>
-        <nuxt-link to="/socials" class="nav-bar__content__links__link">
+        </a>
+        <a href="/socials" to="/socials" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Socials</span>
-        </nuxt-link>
+        </a>
       </div>
 
       <LinkButton
