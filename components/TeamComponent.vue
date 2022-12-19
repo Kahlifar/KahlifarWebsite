@@ -30,6 +30,11 @@
         :tags="['Minecraft', 'Valorant', 'Chill']"
         class="moderator"
       />
+      <DiscordProfileComponent
+        userid="740650325051965511"
+        :tags="['Minecraft', 'OG']"
+        class="senmoderator"
+      />
     </div>
     <h2>Moderatoren</h2>
     <div class="team-component__group">
@@ -37,11 +42,6 @@
         userid="493038652126003200"
         :tags="['VALORANT', 'KLI', 'OG']"
         class="moderator"
-      />
-      <DiscordProfileComponent
-        userid="740650325051965511"
-        :tags="['Minecraft', 'OG']"
-        class="senmoderator"
       />
       <DiscordProfileComponent
         userid="795689216956301343"
