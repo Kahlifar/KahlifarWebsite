@@ -73,4 +73,4 @@ Auf unserem Minecraft Server haben wir einige Plugins. Hier erklären wir euch d
 - Rückgängig geht das folgendermaßen
   1. Elytra und Brustplatte gleichzeitig auf einen **Grindstone** werfen
   2. kurz warten
-  3. Die einzelnen Items werden aufheben
+  3. Die einzelnen Items wieder aufheben

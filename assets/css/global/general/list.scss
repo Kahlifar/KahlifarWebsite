@@ -1,6 +1,8 @@
-li {
-    list-style: "-  ";
-    strong {
-        color: $kahlifar-yellow;
+ul {    
+    > li {
+        list-style: "-  ";
+        strong {
+            color: $kahlifar-yellow;
+        }
     }
 }

@@ -25,6 +25,8 @@ Von Vanilla Minecraft über Modded Minecraft bishin zu ARK Servern hatten wir sc
 
 ### Plugins
 
+Plugins und Datapacks werden [hier](/plugin-explain) erklärt.
+
 <div class="table--scrollable">
     <div class="table__content">
         <table>
