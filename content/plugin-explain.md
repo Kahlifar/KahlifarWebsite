@@ -35,16 +35,15 @@ Auf unserem Minecraft Server haben wir einige Plugins. Hier erklären wir euch d
 - Spawner können mit einem **Silk Touch** Spitzhacke abgebaut werden
 - Die Chance ist bei **80%**, dass ein Spawner gedroppt wird
 
-## Skoice
-
-- **/link** im Discord ausführen um den Minecraft Account mit dem Discord Account zu verbinden
-- In **Join to Proxy Voice** joinen um mit anderen Spielern zu sprechen
-
 ## StatusPlugin
 
 - Dient zur Anzeige des Spielers auf dem Server. Es Zeigt welcher Tätigkeit du gerade nachgehst und ob du bereit für RP bist oder nicht.
 - **/status &lt;status&gt;** Setzt deinen Status welche von uns definiert wurden. *Bei weiteren Ideen per Modmail melden.*
 
+## VoiceChat
+
+- Lade die [**Voice Chat Mod** hier](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) herunter und installiere sie.
+- Du kannst dann mit **v** das Menü öffnen und dort den Voice Chat konfigurieren.
 
 # Datapack Anleitung
 
