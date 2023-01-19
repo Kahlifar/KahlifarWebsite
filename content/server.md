@@ -125,12 +125,6 @@ Plugins und Datapacks werden [hier](/plugin-explain) erklärt.
                     </td>
                 </tr>
                 <tr>
-                    <td>Skoice</td>
-                    <td><a
-                            href="https://www.spigotmc.org/resources/skoice-proximity-voice-chat.82861/">https://www.spigotmc.org/resources/skoice-proximity-voice-chat.82861/</a>
-                    </td>
-                </tr>
-                <tr>
                     <td>spark</td>
                     <td><a
                             href="https://www.spigotmc.org/resources/spark.57242/">https://www.spigotmc.org/resources/spark.57242/</a>
@@ -161,9 +155,15 @@ Plugins und Datapacks werden [hier](/plugin-explain) erklärt.
                     </td>
                 </tr>
                 <tr>
+                    <td>Voice Chat</td>
+                    <td><a
+                            href="https://www.spigotmc.org/resources/skoice-proximity-voice-chat.82861/">https://www.spigotmc.org/resources/skoice-proximity-voice-chat.82861/</a>
+                    </td>
+                </tr>
+                <tr>
                     <td>WorldEdit</td>
                     <td><a
-                            href="https://dev.bukkit.org/projects/worldedit/files/3836896">https://dev.bukkit.org/projects/worldedit/files/3836896</a>
+                            href="https://www.curseforge.com/minecraft/bukkit-plugins/simple-voice-chat/files/all">https://www.curseforge.com/minecraft/bukkit-plugins/simple-voice-chat/files/all</a>
                     </td>
                 </tr>
                 <tr>
