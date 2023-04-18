@@ -2,9 +2,7 @@
   <div class="default-content">
     <h1>Socials</h1>
     <p>
-      Unsere Community ist auf verschiedensten Plattformen vertreten. Wir teilen
-      Bilder oder einfach tolle News. <br />
-      So können wir neue Member erreichen und das Erlebnis in der Community noch
+      Unsere Community ist auf verschiedensten Plattformen vertreten. Wir teilen Bilder oder einfach tolle News. So können wir neue Member erreichen und das Erlebnis in der Community noch
       besser machen. <br>
       <br>
       <b> Hilf uns zu wachsen und folge allen Kanälen </b>
