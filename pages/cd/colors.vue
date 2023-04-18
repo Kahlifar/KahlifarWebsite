@@ -269,7 +269,6 @@ export default {
   gap: 0.5rem;
   margin: 0;
   padding: 1.5rem;
-  // background-color: white;
   list-style: none;
   justify-content: center;
   width: 100%;
@@ -279,21 +278,18 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-y: auto;
-
-    // Reduce width of the scrollbar
-    &::-webkit-scrollbar {
-      height: 5px !important;
-    }
   }
 
   &__shade-list {
     display: flex;
     flex-direction: row;
-    // flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0;
     width: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      height: 5px !important;
+    }
   }
 
   &__shade {
@@ -304,7 +300,6 @@ export default {
     border: 1px #aaa solid;
     &__color {
       height: 100%;
-      //   width: 100%;
       display: flex;
       flex-direction: column;
       padding: 0.2rem;
