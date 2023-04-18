@@ -22,7 +22,7 @@
     </div>
     <div class="social-card__button">
         <LinkButton
-          class="orange"
+          class="lighblue"
           :href="link"
           :title="platformName"
           target="_blank"
