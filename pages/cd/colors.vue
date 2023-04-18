@@ -1,11 +1,13 @@
 <template>
   <div class="default-content">
+    <a class="link-icon" href="/cd/general"><span class="material-icons"> west </span> Back to CD</a>
     <h1>Colors</h1>
     <p>
       We have set our primary colors and secondary colors. They are used in the
-      design of the logos, website and more.<br>
-      <br>
-      The primary colors are used for the main elements of the website. The secondary colors are used for the secondary elements.<br>
+      design of the logos, website and more.<br />
+      <br />
+      The primary colors are used for the main elements of the website. The
+      secondary colors are used for the secondary elements.<br />
       Preferably use the primary colors before the secondary colors.
     </p>
     <!-- {{ colors }} -->
@@ -39,7 +41,12 @@
     <h2>Shades - Primary Colors</h2>
     <ul class="shadelist">
       <li v-for="color in primaryColors" :key="color.id">
-        <h3>{{ color.attributes.Name }}{{ color.attributes.ColorName ? " - " + color.attributes.ColorName : '' }}</h3>
+        <h3>
+          {{ color.attributes.Name
+          }}{{
+            color.attributes.ColorName ? " - " + color.attributes.ColorName : ""
+          }}
+        </h3>
         <ul class="shadelist__shade-list">
           <li
             class="shadelist__shade"
@@ -99,7 +106,12 @@
     <h2>Shades - Secondary Colors</h2>
     <ul class="shadelist">
       <li v-for="color in secondaryColors" :key="color.id">
-        <h3>{{ color.attributes.Name }}{{ color.attributes.ColorName ? " - " + color.attributes.ColorName : '' }}</h3>
+        <h3>
+          {{ color.attributes.Name
+          }}{{
+            color.attributes.ColorName ? " - " + color.attributes.ColorName : ""
+          }}
+        </h3>
         <ul class="shadelist__shade-list">
           <li
             class="shadelist__shade"
@@ -142,11 +154,13 @@ export default {
       // Change the meta description
       meta: [
         {
-          title: "Colors - CD Kahlifar",
-          content:
-            "We have set our primary colors and secondary colors. They are used in the design of the logos, website and more.",
-          hid: "description",
+          property: "og:title",
+          content: `Kahlifar CD - General`,
         },
+        {
+          property: "og:description",
+          content: `General information about the Kahlifar CD`,
+        }
       ],
     };
   },
@@ -265,6 +279,12 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow-y: auto;
+
+    // Reduce width of the scrollbar
+    &::-webkit-scrollbar {
+      height: 5px !important;
+    }
   }
 
   &__shade-list {
