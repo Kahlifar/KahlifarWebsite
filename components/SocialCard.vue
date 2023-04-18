@@ -4,7 +4,7 @@
       <div class="social-card__content__head">
         <img
           class="social-card__content__head__logo"
-          :src="require(`~/assets/images/socials/${platformLogo}`)"
+          :src="platformLogoURL"
           :alt="`${platformName} Logo`"
         />
         <span class="social-card__content__head__title"
@@ -12,7 +12,7 @@
         >
         <div
           class="social-card__content__head__badges">
-            <Badge v-if="live && isLive" text="Live" firstIcon="circle" type="live" ></Badge>
+            <!-- <Badge v-if="live && isLive" text="Live" firstIcon="circle" type="live" ></Badge> -->
         </div>
       </div>
       <p
@@ -22,7 +22,7 @@
     </div>
     <div class="social-card__button">
         <LinkButton
-          :class="buttonTheme"
+          class="orange"
           :href="link"
           :title="platformName"
           target="_blank"
@@ -33,54 +33,36 @@
 
 <script>
 import { marked } from "marked";
-import { isLive } from "~/helpers/twitch/isLive"
+// import { isLive } from "~/helpers/twitch/isLive"
 export default {
   data() {
     return {
-      isLive: false,
+      platformLogoURL: "",
+      platformName: "",
+      accountName: "",
+      link: "" ,
+      description: "",
+      // isLive: false,
     };
   },
   props: {
-    platformLogo: {
-      type: String,
-      required: true,
-    },
-    platformName: {
-      type: String,
-      required: true,
-    },
-    accountName: {
-      type: String,
-      required: true,
-    },
-    link: {
-      type: String,
-      required: true,
-    },
-    buttonTheme: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    live: {
+    socialData: {
       type: Object,
-      required: false,
-    }
+      required: true,
+    },
   },
   methods: {
     parseToMarkdown(text) {
       return marked.parseInline(text, { breaks: true });
     },
   },
-  async fetch() {
-    if (this.live) {
-      const response = await isLive(this.live.channel);
-      this.isLive = response
-    }
-  }
+  async mounted() {
+    this.platformLogoURL = "https://cms.kahlifar.de" + this.socialData.Logo.data.attributes.url;
+    this.platformName = this.socialData.Name;
+    this.accountName = this.socialData.Username;
+    this.link = this.socialData.URL;
+    this.description = this.socialData.Description;
+  },
 };
 </script>
 
