@@ -46,7 +46,7 @@ So können wir neue Member erreichen und das Erlebnis in der Community noch bess
     platform-logo="twitch.svg"
     platform-name="Twitch"
     account-name="ttv/kahlifar"
-    button-theme="purple"
+    button-theme="magenta"
     link="/twitch"
     :live='{"channel": "kahlifar"}'
     description="Livestreams sind immer ein guter Austausch mit der Community.">
