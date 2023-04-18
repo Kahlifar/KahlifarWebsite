@@ -279,12 +279,6 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-y: auto;
-
-    // Reduce width of the scrollbar
-    &::-webkit-scrollbar {
-      height: 5px !important;
-    }
   }
 
   &__shade-list {
@@ -294,6 +288,10 @@ export default {
     gap: 0.5rem;
     padding: 0;
     width: 100%;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      height: 5px !important;
+    }
   }
 
   &__shade {
