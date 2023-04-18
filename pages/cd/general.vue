@@ -35,6 +35,8 @@
     </p>
     <h2>General Elements</h2>
     <p>
+      The background of the website is generaly a <b>Kahlifar Blue</b> background. <br>
+      <br>
       The often used, rotated rectangles are set at a 26° degree angle to the right.<br />
       They don't have content and are more a design element in the CD colors and used for the background.
     </p>
