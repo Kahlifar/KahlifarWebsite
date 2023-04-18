@@ -92,14 +92,13 @@ $transition-duration: 0.2s;
         }
     }
 
-    &.purple {
-        background-color: $kahlifar-purple;
-        border: solid $border-thickness $kahlifar-purple-120;
+    &.magenta {
+        background-color: $kahlifar-magenta;
+        border: solid $border-thickness $kahlifar-magenta-120;
         color: $white;
 
         &:hover {
-            background-color: $kahlifar-purple-120;
-            // border: solid $border-thickness $kahlifar-purple;
+            background-color: $kahlifar-magenta-120;
         }
     }
 }

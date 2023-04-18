@@ -87,6 +87,7 @@ export default {
       '/twitter',
       '/twitch',
       '/instagram',
+      '/cd/**'
     ]
   },
   redirect: [
