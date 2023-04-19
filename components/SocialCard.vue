@@ -10,9 +10,16 @@
         <span class="social-card__content__head__title"
           >{{ platformName }}: {{ accountName }}</span
         >
-        <div
-          class="social-card__content__head__badges">
-            <!-- <Badge v-if="live && isLive" text="Live" firstIcon="circle" type="live" ></Badge> -->
+        <div class="social-card__content__head__badges">
+          <Badge
+            v-for="badge in badges"
+            :key="badge.id"
+            :text="badge.Text"
+            :firstIcon="badge.firstIcon ? badge.firstIcon : undefined"
+            :secondIcon="badge.secondIcon ? badge.secondIcon : undefined"
+            :backgroundColor="badge.BackgroundColor"
+            :textColor="badge.TextColor"
+          ></Badge>
         </div>
       </div>
       <p
@@ -21,13 +28,13 @@
       ></p>
     </div>
     <div class="social-card__button">
-        <LinkButton
-          class="lighblue"
-          :href="link"
-          :title="platformName"
-          target="_blank"
-        />
-      </div>
+      <LinkButton
+        class="lighblue"
+        :href="link"
+        :title="platformName"
+        target="_blank"
+      />
+    </div>
   </div>
 </template>
 
@@ -42,7 +49,7 @@ export default {
       accountName: "",
       link: "" ,
       description: "",
-      // isLive: false,
+      badges: [],
     };
   },
   props: {
@@ -55,13 +62,18 @@ export default {
     parseToMarkdown(text) {
       return marked.parseInline(text, { breaks: true });
     },
-  },
+    sortBadges(badges) {
+      // Where isActive is true
+      return badges.filter((badge) => badge.isActive);
+      },
+  },      
   async mounted() {
     this.platformLogoURL = "https://cms.kahlifar.de" + this.socialData.Logo.data.attributes.url;
     this.platformName = this.socialData.Name;
     this.accountName = this.socialData.Username;
     this.link = this.socialData.URL;
     this.description = this.socialData.Description;
+    this.badges = this.sortBadges(this.socialData.Badges);
   },
 };
 </script>
