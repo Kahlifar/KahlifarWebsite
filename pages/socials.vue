@@ -38,7 +38,8 @@ export default {
   },
   async fetch() {
     this.socials = (
-      await this.$axios.get(`https://cms.kahlifar.de/api/socials?populate=*`)
+      // Read the env from the context
+      await this.$axios.get(`${process.env.CMS_URL}/api/socials?populate=*`)
     ).data.data;
   },
 };

@@ -15,7 +15,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       {
         property: 'og:title',
-        content: `Kahlifar Communtiy`,
+        content: `Kahlifar Community`,
       },
       {
         property: 'og:type',
@@ -37,6 +37,11 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  env: {
+    CMS_URL: process.env.CMS_URL || 'https://cms.kahlifar.de',
+    API_URL: process.env.API_URL || 'https://api.kahlifar.de',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
