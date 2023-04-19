@@ -27,7 +27,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://kahlifar.de/assets/images/logo_background.png',
+        content: require("~/assets/images/logo_background.png"),
       },
       { name: 'msapplication-TileColor', content: '#023047' },
       { name: 'theme-color', content: '#023047' },
