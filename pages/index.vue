@@ -26,7 +26,8 @@
       <p>Es werden Daten geladen...</p>
     </div>
     <div v-else class="news-section">
-      <EventCard v-for="(event) in events" :key="event.id" 
+      <p v-if="events.length === 0">Es sind keine Events vorhanden</p>
+      <EventCard v-else v-for="(event) in events" :key="event.id" 
         :eventData="event">
       </EventCard>
     </div>
