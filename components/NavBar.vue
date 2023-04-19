@@ -2,8 +2,7 @@
   <nav :class="isOpen ? 'nav-bar--open' : '' " class="nav-bar">
     <div class="nav-bar__content">
       <nuxt-link to="/" class="nav-bar__logo">
-        <img src="~/assets/images/svg/logo.svg" alt="logo" />
-        <span class="nav-bar__logo__title">ahlifar</span>
+        <img src="~/assets/images/logo_full-name.png" alt="logo" />
       </nuxt-link>
       <div
         class="nav-bar__content__links"

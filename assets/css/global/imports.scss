@@ -5,6 +5,9 @@
 @import './variables/colors.scss';
 @import './variables/font.scss';
 
+@import './pages/default-container.scss';
+@import './pages/default-content.scss';
+
 // General
 @import './general/code.scss';
 @import './general/links.scss';
@@ -14,6 +17,7 @@
 
 // Components
 @import './components/badge.scss';
+@import './components/eventcard.scss';
 @import './components/footer.scss';
 @import './components/linkbutton.scss';
 @import './components/navbar.scss';
@@ -24,5 +28,3 @@
 @import './components/typewriter.scss';
 
 // Pages
-@import './pages/default-container.scss';
-@import './pages/default-content.scss';

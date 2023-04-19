@@ -174,7 +174,7 @@ export default {
   methods: {
     async getColors() {
       this.colors = (
-        await this.$axios.get(`https://cms.kahlifar.de/api/colors?populate=*`)
+        await this.$axios.get(`${process.env.CMS_URL}/api/colors?populate=*`)
       ).data.data;
     },
     async sortColorsByPrimary() {

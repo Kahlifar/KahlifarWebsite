@@ -1,12 +1,12 @@
 .default-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 10rem;
 
     h1 {
         letter-spacing: 1px;
+        border-bottom: 1px solid $kahlifar-orange;
+        width: max-content;
     }
 
     .material-icons {

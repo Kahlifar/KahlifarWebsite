@@ -37,9 +37,15 @@
 <script>
 export default {
   layout: "default",
-  async asyncData({ $content, params }) {
-    const doc = await $content("index").fetch();
-    return { doc };
+  data() {
+    return {
+      events: [],
+    };
+  },
+  async fetch() {
+    this.events = (
+      await this.$axios.get(`${process.env.CMS_URL}/api/events?populate=*`)
+    ).data.data;
   },
 };
 </script>
