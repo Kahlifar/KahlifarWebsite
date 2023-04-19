@@ -26,7 +26,7 @@
       <p>Es werden Daten geladen...</p>
     </div>
     <div v-else class="news-section">
-      <p v-if="events.length === 0">Es sind keine Events vorhanden</p>
+      <p class="news-section__no-events" v-if="events.length === 0">Es sind momenan keine Events geplant.</p>
       <EventCard v-else v-for="(event) in events" :key="event.id" 
         :eventData="event">
       </EventCard>
@@ -62,6 +62,12 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    &__no-events {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: $black-60;
+    }
   }
 }
 </style>
