@@ -15,7 +15,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       {
         property: 'og:title',
-        content: `Kahlifar Communtiy`,
+        content: `Kahlifar Community`,
       },
       {
         property: 'og:type',
