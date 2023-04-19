@@ -48,7 +48,7 @@
     &__logo {
         display: flex;
         flex-direction: row;
-        margin-right: 3rem;
+        margin-right: 1rem;
         > img {
             align-self: center;
             height: 3rem;
@@ -99,9 +99,6 @@
             margin-right: 0;
             > img {
                 height: 2rem;
-            }
-            &__title {
-                font-size: 2rem;
             }
         }
         &__burger {

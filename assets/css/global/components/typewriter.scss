@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
 
+    & h1 {
+        border: none;
+    }
+
     &__cursor {
         display: inline-block;
         width: 2px;

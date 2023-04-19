@@ -39,6 +39,11 @@ export default {
     ]
   },
 
+  env: {
+    CMS_URL: process.env.CMS_URL || 'https://cms.kahlifar.de',
+    API_URL: process.env.API_URL || 'https://api.kahlifar.de',
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     "~/assets/css/global.scss"

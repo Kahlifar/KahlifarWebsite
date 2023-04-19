@@ -8,17 +8,43 @@
       href="http://dc.kahlifar.de"
       target="_blank"
     />
-
-    <nuxt-content :document="doc" />
+    <p data-v-0d12176a="">
+      Wir heissen dich vom Owner und Modteam sehr gerne wilkommen. Bei uns dreht
+      sich alles über den Discord also joine gerne
+      <a
+        href="http://dc.kahlifar.de/"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+        >hier</a
+      >.
+    </p>
+    <h2>Events</h2>
+    <div v-if="$fetchState.error" class="news-section">
+      <p>Es ist ein Fehler aufgetreten</p>
+    </div>
+    <div v-else-if="$fetchState.pending" class="news-section">
+      <p>Es werden Daten geladen...</p>
+    </div>
+    <div v-else class="news-section">
+      <EventCard v-for="(event) in events" :key="event.id" 
+        :eventData="event">
+      </EventCard>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   layout: "default",
-  async asyncData({ $content, params }) {
-    const doc = await $content("index").fetch();
-    return { doc };
+  data() {
+    return {
+      events: [],
+    };
+  },
+  async fetch() {
+    this.events = (
+      await this.$axios.get(`${process.env.CMS_URL}/api/events?populate=*`)
+    ).data.data;
   },
 };
 </script>
@@ -29,5 +55,12 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .news-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>
