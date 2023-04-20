@@ -1,10 +1,10 @@
 <template>
   <div class="profile-component">
     <div v-if="$fetchState.pending">
-      <h2>Loading ...</h2>
+      <h2 class="status-text">Loading ...</h2>
     </div>
     <div v-else-if="$fetchState.error">
-      <h2>An Error occured.</h2>
+      <h2 class="status-text">An Error occured.</h2>
     </div>
     <div
       v-else

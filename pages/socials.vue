@@ -25,7 +25,7 @@
     <p>
       Wir unterstützen auch Content Creator. Wenn du gerne Videos machst oder regelmässig Livestreams machst, dann melde dich bei uns. Wir unterstützen dich gerne und teilen gerne unsere Reichweite. <br>
       <br>
-      <b> Melde dich bei uns über Discord ( <a href="/team">unser Team</a> ). </b>
+      <b> Melde dich bei uns über Discord</b> ( <a href="/team">unser Team</a> ). 
 
     </p>
 

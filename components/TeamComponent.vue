@@ -1,6 +1,7 @@
 <template>
   <div class="team-component">
-    <h2>{{ teamData.attributes.Title }}</h2>
+    <h2 v-if="!$fetchState.pending">{{ teamData.attributes.Title }}</h2>
+
     <span v-if="$fetchState.pending">Loading Tean...</span>
     <span v-else-if="$fetchState.error">An Error occured.</span>
     <span
