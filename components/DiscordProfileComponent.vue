@@ -20,11 +20,11 @@
         {{ memberData.nick ? memberData.nick : memberData.user.username }}
       </span>
       <span class="profile-component__content__discordtag">
-        {{ memberData.user.username }}#{{ memberData.user.discriminator }}
+        {{ memberData.discordtag }}
       </span>
       <div class="profile-component__content__tags">
         <span
-          v-for="(tag, index) in tags"
+          v-for="(tag, index) in memberData.tags"
           :key="index"
           class="profile-component__content__tags__tag"
           ><span class="material-icons">tag</span>{{ tag }}</span
@@ -43,16 +43,9 @@
 import { getTopRole, getAvatarURL } from "~/helpers/discord/user";
 export default {
   props: {
-    userid: {
-      type: String,
-      required: true,
-    },
-    tags: {
-      type: Array,
-      required: true,
-    },
-    socials: {
+    profileData: {
       type: Object,
+      required: false
     },
   },
   data() {
@@ -61,12 +54,22 @@ export default {
     };
   },
   async fetch() {
-    const response = await this.$axios.get(
-      `https://kahlifar.de/api/discord/members?userId=${this.userid}`
-    );
-    this.memberData = response.data;
-    this.memberData.topRole = await getTopRole(this.memberData);
-    this.memberData.avatarURL = await getAvatarURL(this.memberData);
+    if (this.profileData.attributes.DiscordId) {
+      const response = await this.$axios.get(
+        `https://kahlifar.de/api/discord/members?userId=${this.profileData.attributes.DiscordId}`
+      );
+      this.memberData = response.data;
+      this.memberData.discordtag = `${memberData.user.username}#${memberData.user.discriminator}`;
+    }
+    memberData.tags = profileData.attributes.Tags;
+    memberData.socials = profileData.attributes.Socials;
+
+    if (profileData.attributes.Username) memberData.user.username = profileData.attributes.Username;
+    if (profileData.attributes.DiscordTag) memberData.discordtag = profileData.attributes.DiscordTag;
+    
+
+
+
   },
   fetchOnServer: true,
 };
