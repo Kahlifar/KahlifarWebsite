@@ -9,7 +9,7 @@
     <div
       v-else
       class="profile-component__content"
-      :style="`--color: #${memberData.topRole.color.toString(16)}`"
+      :style="`--color: #${memberData.topRole.color}`"
     >
       <img
         class="profile-component__content__image"
@@ -24,16 +24,16 @@
       </span>
       <div class="profile-component__content__tags">
         <span
-          v-for="(tag, index) in memberData.tags"
-          :key="index"
+          v-for="(tag) in memberData.tags"
+          :key="tag.id"
           class="profile-component__content__tags__tag"
-          ><span class="material-icons">tag</span>{{ tag }}</span
+          ><span class="material-icons">tag</span>{{ tag.value }}</span
         >
       </div>
-      <!-- <div class="profile-component__content__socials">
-        <span class="profile-component__content__socials--twitter" v-if="socials.twitter">{{socials.twitter}}</span>
+      <div class="profile-component__content__socials">
+        <span class="profile-component__content__socials--twitter" v-if="memberData.socials.Twitter"> <span class="material-icons"></span> {{memberData.socials.Twitter}}</span>
 
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -54,18 +54,36 @@ export default {
     };
   },
   async fetch() {
+    console.log(this.profileData);
     if (this.profileData.attributes.DiscordId) {
       const response = await this.$axios.get(
-        `https://kahlifar.de/api/discord/members?userId=${this.profileData.attributes.DiscordId}`
+        `http://localhost:3000/api/discord/members?userId=${this.profileData.attributes.DiscordId.value}`
       );
+      console.log(response.data);
       this.memberData = response.data;
-      this.memberData.discordtag = `${memberData.user.username}#${memberData.user.discriminator}`;
+      this.memberData.discordtag = `${this.memberData.user.username}#${this.memberData.user.discriminator}`;
     }
-    memberData.tags = profileData.attributes.Tags;
-    memberData.socials = profileData.attributes.Socials;
+    this.memberData.tags = this.profileData.attributes.Tags;
+    this.memberData.socials = this.profileData.attributes.Socials;
 
-    if (profileData.attributes.Username) memberData.user.username = profileData.attributes.Username;
-    if (profileData.attributes.DiscordTag) memberData.discordtag = profileData.attributes.DiscordTag;
+    if (this.profileData.attributes.Username) this.memberData.user.username = this.profileData.attributes.Username;
+    if (this.profileData.attributes.DiscordTag) this.memberData.discordtag = this.profileData.attributes.DiscordTag;
+    if (this.profileData.attributes.ProfilePicture.data) {
+      this.memberData.avatarURL = process.env.CMS_URL + this.profileData.attributes.ProfilePicture.data.attributes.url;
+    } else {
+      this.memberData.avatarURL = await getAvatarURL(this.memberData);
+      console.log(this.memberData.avatarURL);
+    }
+    if (this.profileData.attributes.Color) {
+      this.memberData.topRole = {
+        color: this.profileData.attributes.Color
+      }
+    } else {
+      this.memberData.topRole = {
+        color: (await getTopRole(this.memberData)).color.toString(16)
+      };
+    }
+
     
 
 
