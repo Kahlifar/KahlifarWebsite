@@ -31,8 +31,21 @@
         >
       </div>
       <div class="profile-component__content__socials">
-        <span class="profile-component__content__socials--twitter" v-if="memberData.socials.Twitter"> <span class="material-icons"></span> {{memberData.socials.Twitter}}</span>
-
+        <span class="profile-component__content__socials--twitter" v-if="memberData.socials.Twitter"> 
+          <a :href="`https://twitter.com/${memberData.socials.Twitter}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-twitter"/>
+          </a>
+        </span>
+        <span class="profile-component__content__socials--youtube" v-if="memberData.socials.YouTube"> 
+          <a :href="`https://youtube.com/channel/${memberData.socials.YouTube}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-youtube"/>
+          </a>
+        </span>
+        <span class="profile-component__content__socials--twitch" v-if="memberData.socials.Twitch"> 
+          <a :href="`https://twitch.tv/${memberData.socials.Twitch}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-twitch"/>
+          </a>
+        </span>
       </div>
     </div>
   </div>
@@ -45,7 +58,7 @@ export default {
   props: {
     profileData: {
       type: Object,
-      required: false
+      required: false,
     },
   },
   data() {
@@ -54,40 +67,36 @@ export default {
     };
   },
   async fetch() {
-    console.log(this.profileData);
     if (this.profileData.attributes.DiscordId) {
       const response = await this.$axios.get(
         `http://localhost:3000/api/discord/members?userId=${this.profileData.attributes.DiscordId.value}`
       );
-      console.log(response.data);
       this.memberData = response.data;
       this.memberData.discordtag = `${this.memberData.user.username}#${this.memberData.user.discriminator}`;
     }
     this.memberData.tags = this.profileData.attributes.Tags;
     this.memberData.socials = this.profileData.attributes.Socials;
 
-    if (this.profileData.attributes.Username) this.memberData.user.username = this.profileData.attributes.Username;
-    if (this.profileData.attributes.DiscordTag) this.memberData.discordtag = this.profileData.attributes.DiscordTag;
+    if (this.profileData.attributes.Username)
+      this.memberData.user.username = this.profileData.attributes.Username;
+    if (this.profileData.attributes.DiscordTag)
+      this.memberData.discordtag = this.profileData.attributes.DiscordTag;
     if (this.profileData.attributes.ProfilePicture.data) {
-      this.memberData.avatarURL = process.env.CMS_URL + this.profileData.attributes.ProfilePicture.data.attributes.url;
+      this.memberData.avatarURL =
+        process.env.CMS_URL +
+        this.profileData.attributes.ProfilePicture.data.attributes.url;
     } else {
       this.memberData.avatarURL = await getAvatarURL(this.memberData);
-      console.log(this.memberData.avatarURL);
     }
     if (this.profileData.attributes.Color) {
       this.memberData.topRole = {
-        color: this.profileData.attributes.Color
-      }
+        color: this.profileData.attributes.Color,
+      };
     } else {
       this.memberData.topRole = {
-        color: (await getTopRole(this.memberData)).color.toString(16)
+        color: (await getTopRole(this.memberData)).color.toString(16),
       };
     }
-
-    
-
-
-
   },
   fetchOnServer: true,
 };

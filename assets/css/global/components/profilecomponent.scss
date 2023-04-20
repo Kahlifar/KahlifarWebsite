@@ -49,6 +49,14 @@
                 }
             }
         }
+        &__socials {
+            margin-top: 1rem;
+            font-size: 20px;
+
+            & a {
+                color: $kahlifar-antrasit;
+            }
+        }
     }
     &.owner {
         background-color: $kahlifar-sky-blue;

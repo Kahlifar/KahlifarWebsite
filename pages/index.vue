@@ -1,6 +1,6 @@
 <template>
   <div class="default-content index-page">
-    <Typewriter text="Willkommen, auf Kahlifar"></Typewriter>
+    <Typewriter text="Wilkommen, auf Kahlifar"></Typewriter>
     <LinkButton
       class="light-blue"
       title="Discord"

@@ -8,4 +8,9 @@
         justify-content: center;
         height: max-content;
     }
+    &__no-profiles {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $black-60;
+    }
 }
