@@ -1,12 +1,19 @@
 .team-component {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    & h2 {
+        align-self: flex-start;
+    }
     &__profiles {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        height: max-content;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // gap: 1rem;
+        // align-items: center;
+        // justify-content: center;
+        // // height: max-content;
     }
     &__no-profiles {
         font-size: 1.2rem;

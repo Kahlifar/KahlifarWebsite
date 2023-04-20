@@ -1,9 +1,14 @@
 <template>
   <div class="team-component">
+    <h2>{{ teamData.attributes.Title }}</h2>
     <span v-if="$fetchState.pending">Loading Tean...</span>
     <span v-else-if="$fetchState.error">An Error occured.</span>
+    <span
+      class="team-component__no-profiles"
+      v-else-if="teamData.attributes.profiles.data.length == 0"
+      >Keine Mitglieder gefunden in dieser Gruppe.</span
+    >
     <div v-else-if="teamData && teamData.attributes.profiles.data">
-      <h2>{{ teamData.attributes.Title }}</h2>
       <p>{{ teamData.attributes.Description }}</p>
       <div class="team-component__profiles">
         <DiscordProfileComponent
@@ -15,7 +20,6 @@
         />
       </div>
     </div>
-    <span class="team-component__no-profiles" v-else-if="teamData.attributes.profiles.data == []">Keine Mitglieder gefunden in dieser Gruppe.</span>
   </div>
 </template>
 
@@ -37,7 +41,6 @@ export default {
       `${process.env.CMS_URL}/api/profile-groups?populate[profiles][populate]=*&filters[Name][$eq]=${this.teamId}`
     );
     this.teamData = response.data.data[0];
-    console.log(teamData.attributes.profiles.data);
   },
 };
 </script>
