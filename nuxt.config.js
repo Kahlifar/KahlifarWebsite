@@ -46,11 +46,14 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
     "~/assets/css/global.scss"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/fontawesome.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -58,6 +61,7 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
   ],
+
 
   serverMiddleware: [
     { path: '/api/discord', handler: '~/api/discordAPI.js' }
@@ -70,7 +74,7 @@ export default {
     '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    '@nuxtjs/redirect-module'
+    '@nuxtjs/redirect-module',
   ],
 
   axios: {

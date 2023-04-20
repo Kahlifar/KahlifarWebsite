@@ -16,7 +16,7 @@
       <p class="event-card__description">
         {{
           eventData.attributes.Description
-            ? eventData.attributes.Description
+            ? parseMarkdown(eventData.attributes.Description)
             : ""
         }}
       </p>
@@ -48,6 +48,7 @@
 
 <script>
 import moment from "moment";
+import { marked } from "marked";
 export default {
   name: "EventCard",
   props: {
@@ -75,6 +76,9 @@ export default {
     }
   },
   methods: {
+    parseMarkdown(markdown) {
+      return marked.parseInline(markdown);
+    },
     formatDateTimestamp(timestamp) {
       return moment(timestamp).format("DD.MM.YYYY, HH:mm:ss");
     },

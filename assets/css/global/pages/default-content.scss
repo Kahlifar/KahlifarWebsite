@@ -9,10 +9,21 @@
         width: max-content;
     }
 
+    h2 {
+        border-bottom: 1px solid $kahlifar-yellow;
+        width: max-content;
+    }
+
     .material-icons {
         font-size: $font-size-normal;
     }
     @media screen and (max-width: $sm-max) {
         margin: 2rem;
+    }
+    .status-text {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $black-60;
+        border: none;
     }
 }

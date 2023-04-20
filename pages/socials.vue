@@ -20,6 +20,19 @@
       >
       </SocialCard>
     </div>
+
+    <h2>Content Creator</h2>
+    <p>
+      Wir unterstützen auch Content Creator. Wenn du gerne Videos machst oder regelmässig Livestreams machst, dann melde dich bei uns. Wir unterstützen dich gerne und teilen gerne unsere Reichweite. <br>
+      <br>
+      <b> Melde dich bei uns über Discord</b> ( <a href="/team">unser Team</a> ). 
+
+    </p>
+
+    <div class="content-creators">
+
+    </div>
+
   </div>
 </template>
 
@@ -34,6 +47,7 @@ export default {
   data() {
     return {
       socials: [],
+      creators: [],
     };
   },
   async fetch() {

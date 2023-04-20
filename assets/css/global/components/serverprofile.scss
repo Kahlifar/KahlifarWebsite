@@ -7,6 +7,9 @@
     margin: 1rem 1.5rem;
     &__content {
         margin-right: 2rem;
+        &__title {
+            border-bottom: none !important;
+        }
         &__subtitle {
             margin-bottom: -0.5rem;
         }
@@ -61,6 +64,7 @@
                 order: 2;
                 &__title {
                     margin-top: 0;
+                    border-bottom: none;
                 }
             }
             &__game {

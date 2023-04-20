@@ -2,7 +2,7 @@
     background-color: $kahlifar-sky-blue;
     border-radius: 10px;
     width: 14rem;
-    min-height: 272.75px;
+    min-height: 320px;
     height: 100%;
     &__content {
         display: flex;
@@ -49,31 +49,11 @@
                 }
             }
         }
-    }
-    &.owner {
-        background-color: $kahlifar-sky-blue;
-        .profile-component__content__tags__tag {
-            background-color: $kahlifar-blue-20;
-            &:hover {
-                background-color: $kahlifar-blue-40;
-            }
-        }
-    }
-    &.senmoderator {
-        background-color: $kahlifar-blue-80;
-        .profile-component__content__tags__tag {
-            background-color: $kahlifar-light-blue-20;
-            &:hover {
-                background-color: $kahlifar-light-blue-40;
-            }
-        }
-    }
-    &.moderator {
-        background-color: $kahlifar-blue-80;
-        .profile-component__content__tags__tag {
-            background-color: $kahlifar-blue-20;
-            &:hover {
-                background-color: $kahlifar-blue-40;
+        &__socials {
+            margin-top: 1rem;
+            font-size: 20px;
+            & a {
+                color: $kahlifar-antrasit;
             }
         }
     }
