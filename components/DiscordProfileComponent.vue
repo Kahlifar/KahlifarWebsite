@@ -69,7 +69,7 @@ export default {
   async fetch() {
     if (this.profileData.attributes.DiscordId) {
       const response = await this.$axios.get(
-        `http://localhost:3000/api/discord/members?userId=${this.profileData.attributes.DiscordId.value}`
+        `https://kahlifar.de/api/discord/members?userId=${this.profileData.attributes.DiscordId.value}`
       );
       this.memberData = response.data;
       this.memberData.discordtag = `${this.memberData.user.username}#${this.memberData.user.discriminator}`;
