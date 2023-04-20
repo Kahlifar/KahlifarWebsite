@@ -1,15 +1,15 @@
 <template>
   <div class="profile-component">
     <div v-if="$fetchState.pending">
-      <h2>Loading ...</h2>
+      <h2 class="status-text">Loading ...</h2>
     </div>
     <div v-else-if="$fetchState.error">
-      <h2>An Error occured.</h2>
+      <h2 class="status-text">An Error occured.</h2>
     </div>
     <div
       v-else
       class="profile-component__content"
-      :style="`--color: #${memberData.topRole.color.toString(16)}`"
+      :style="`--color: #${memberData.topRole.color}`"
     >
       <img
         class="profile-component__content__image"
@@ -20,20 +20,33 @@
         {{ memberData.nick ? memberData.nick : memberData.user.username }}
       </span>
       <span class="profile-component__content__discordtag">
-        {{ memberData.user.username }}#{{ memberData.user.discriminator }}
+        {{ memberData.discordtag }}
       </span>
       <div class="profile-component__content__tags">
         <span
-          v-for="(tag, index) in tags"
-          :key="index"
+          v-for="(tag) in memberData.tags"
+          :key="tag.id"
           class="profile-component__content__tags__tag"
-          ><span class="material-icons">tag</span>{{ tag }}</span
+          ><span class="material-icons">tag</span>{{ tag.value }}</span
         >
       </div>
-      <!-- <div class="profile-component__content__socials">
-        <span class="profile-component__content__socials--twitter" v-if="socials.twitter">{{socials.twitter}}</span>
-
-      </div> -->
+      <div class="profile-component__content__socials">
+        <span class="profile-component__content__socials--twitter" v-if="memberData.socials.Twitter"> 
+          <a :href="`https://twitter.com/${memberData.socials.Twitter}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-twitter"/>
+          </a>
+        </span>
+        <span class="profile-component__content__socials--youtube" v-if="memberData.socials.YouTube"> 
+          <a :href="`https://youtube.com/channel/${memberData.socials.YouTube}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-youtube"/>
+          </a>
+        </span>
+        <span class="profile-component__content__socials--twitch" v-if="memberData.socials.Twitch"> 
+          <a :href="`https://twitch.tv/${memberData.socials.Twitch}`" target="_blank">
+            <font-awesome-icon icon="fa-brands fa-twitch"/>
+          </a>
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -43,16 +56,9 @@
 import { getTopRole, getAvatarURL } from "~/helpers/discord/user";
 export default {
   props: {
-    userid: {
-      type: String,
-      required: true,
-    },
-    tags: {
-      type: Array,
-      required: true,
-    },
-    socials: {
+    profileData: {
       type: Object,
+      required: false,
     },
   },
   data() {
@@ -61,12 +67,36 @@ export default {
     };
   },
   async fetch() {
-    const response = await this.$axios.get(
-      `https://kahlifar.de/api/discord/members?userId=${this.userid}`
-    );
-    this.memberData = response.data;
-    this.memberData.topRole = await getTopRole(this.memberData);
-    this.memberData.avatarURL = await getAvatarURL(this.memberData);
+    if (this.profileData.attributes.DiscordId) {
+      const response = await this.$axios.get(
+        `http://localhost:3000/api/discord/members?userId=${this.profileData.attributes.DiscordId.value}`
+      );
+      this.memberData = response.data;
+      this.memberData.discordtag = `${this.memberData.user.username}#${this.memberData.user.discriminator}`;
+    }
+    this.memberData.tags = this.profileData.attributes.Tags;
+    this.memberData.socials = this.profileData.attributes.Socials;
+
+    if (this.profileData.attributes.Username)
+      this.memberData.user.username = this.profileData.attributes.Username;
+    if (this.profileData.attributes.DiscordTag)
+      this.memberData.discordtag = this.profileData.attributes.DiscordTag;
+    if (this.profileData.attributes.ProfilePicture.data) {
+      this.memberData.avatarURL =
+        process.env.CMS_URL +
+        this.profileData.attributes.ProfilePicture.data.attributes.url;
+    } else {
+      this.memberData.avatarURL = await getAvatarURL(this.memberData);
+    }
+    if (this.profileData.attributes.Color) {
+      this.memberData.topRole = {
+        color: this.profileData.attributes.Color,
+      };
+    } else {
+      this.memberData.topRole = {
+        color: (await getTopRole(this.memberData)).color.toString(16),
+      };
+    }
   },
   fetchOnServer: true,
 };

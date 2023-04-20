@@ -13,6 +13,7 @@ $transition-duration: 0.2s;
     &__link {
         color: inherit;
         display: flex;
+        align-items: center;
         font-size: $font-size-normal;
         padding: 0.5rem;
         text-decoration: none;
