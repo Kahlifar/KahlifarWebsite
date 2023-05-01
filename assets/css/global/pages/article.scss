@@ -1,0 +1,51 @@
+.article {
+    &__header {
+        &__title {
+            > h1 {
+                margin-bottom: 0;
+            }
+            > h2 {
+                border: none;
+                color: $kahilfar-antracite-60;
+                margin-top: 0.5rem;
+            }
+        }
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                color: $black;
+                border-radius: 17px;
+                background-color: $kahlifar-sky-blue;
+                padding: 0.2rem 0.5rem;
+
+                > .material-icons {
+                    font-size: 1.3rem;
+                    margin-right: 0.3rem;
+                }
+            }
+        }
+    }
+
+    &__content {
+        &__item {
+            display: flex;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: contain;
+        }
+    }
+}

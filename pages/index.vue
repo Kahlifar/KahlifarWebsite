@@ -1,6 +1,6 @@
 <template>
   <div class="default-content index-page">
-    <Typewriter text="Wilkommen, auf Kahlifar"></Typewriter>
+    <Typewriter text="Willkommen, auf Kahlifar"></Typewriter>
     <LinkButton
       class="light-blue"
       title="Discord"
@@ -9,7 +9,7 @@
       target="_blank"
     />
     <p data-v-0d12176a="">
-      Wir heissen dich vom Owner und Modteam sehr gerne wilkommen. Bei uns dreht
+      Wir heissen dich vom Owner und Modteam sehr gerne willkommen. Bei uns dreht
       sich alles über den Discord also joine gerne
       <a
         href="http://dc.kahlifar.de/"
