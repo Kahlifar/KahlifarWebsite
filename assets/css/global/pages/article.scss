@@ -1,0 +1,88 @@
+.article {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        border-bottom: $kahilfar-antracite-60 1px solid;
+        margin-bottom: 0.75rem;
+        &__title {
+            > h1 {
+                margin-bottom: 0;
+            }
+            > h2 {
+                border: none;
+                color: $kahilfar-antracite-60;
+                margin-top: 0.5rem;
+            }
+        }
+        &__meta {
+            display: flex;
+            flex-direction: row;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            gap: 1rem;
+
+            &__item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                color: $black;
+                border-radius: 17px;
+                background-color: $kahlifar-sky-blue;
+                padding: 0.2rem 0.5rem;
+
+                > .material-icons {
+                    font-size: 1.3rem;
+                    margin-right: 0.3rem;
+                }
+            }
+        }
+        &__thumbnail {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+            height: 400px;
+            margin-bottom: 1rem;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__content {
+        // margin-top: 0.5rem;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        & p {
+            flex-direction: column;
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+        & img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+        }
+
+        & h1, & h2, & h3, & h4, & h5, & h6 {
+            > a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        & b, & strong {
+            color: $kahlifar-yellow;
+        }
+    }
+}
