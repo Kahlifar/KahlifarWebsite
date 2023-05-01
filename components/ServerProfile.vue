@@ -1,26 +1,30 @@
 <template>
   <div class="server-profile">
+    <img class="server-profile__banner" :src="`${CMS_URL}${serverData.Banner.data.attributes.url }`" alt="">
     <div class="server-profile__content">
-      <h2 class="server-profile__content__title">{{ title }}</h2>
-      <h3 class="server-profile__content__subtitle">Beschreibung:</h3>
-      <p
-        class="server-profile__content__description"
-        v-html="parsetoMarkdown(description)"
-      ></p>
-      <h3 class="server-profile__content__subtitle">Vorraussetzungen:</h3>
-      <p
-        class="server-profile__content__prerequisites"
-        v-html="parsetoMarkdown(prerequisites)"
-      ></p>
-    </div>
-    <div class="server-profile__game">
-      <img
-        class="server-profile__game__image"
-        :src="require(`~/assets/images/server/${gameImage}`)"
-        :alt="`${gameName} Logo`"
-      />
-      <span class="server-profile__game__name">{{ gameName }}</span>
-      <span class="server-profile__game__version">{{ gameVersion }}</span>
+      <div class="server-profile__info">
+        <h2 class="server-profile__info__title">{{ serverData.Name }}</h2>
+        <h3 class="server-profile__info__subtitle">Beschreibung:</h3>
+        <p
+          class="server-profile__info__description"
+          v-html="parsetoMarkdown(serverData.Description)"
+        ></p>
+        <h3 v-if="serverData.Requirements" class="server-profile__info__subtitle">Vorraussetzungen:</h3>
+        <p
+        v-if="serverData.Requirements"
+          class="server-profile__info__prerequisites"
+          v-html="parsetoMarkdown(serverData.Requirements)"
+        ></p>
+      </div>
+      <div class="server-profile__game">
+        <img
+          class="server-profile__game__image"
+          :src="`${CMS_URL}${serverData.AppLogo.data.attributes.url}`"
+          :alt="`${serverData.AppName} Logo`"
+        />
+        <span class="server-profile__game__name">{{ serverData.AppName }}</span>
+        <span class="server-profile__game__version" v-if="serverData.AppVersion">{{ serverData.AppVersion }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -28,30 +32,15 @@
 import { marked } from "marked";
 export default {
   props: {
-    title: {
-      type: String,
+    serverData: {
+      type: Object,
       required: true,
     },
-    description: {
-      type: String,
-      required: true,
-    },
-    prerequisites: {
-      type: String,
-      required: false,
-    },
-    gameImage: {
-      type: String,
-      required: true,
-    },
-    gameName: {
-      type: String,
-      required: true,
-    },
-    gameVersion: {
-      type: String,
-      required: false,
-    },
+  },
+  data() {
+    return {
+      CMS_URL: process.env.CMS_URL,
+    };
   },
   methods: {
     parsetoMarkdown(text) {
