@@ -1,5 +1,9 @@
 .article {
     &__header {
+        display: flex;
+        flex-direction: column;
+        border-bottom: $kahilfar-antracite-60 1px solid;
+        margin-bottom: 0.75rem;
         &__title {
             > h1 {
                 margin-bottom: 0;
@@ -33,19 +37,52 @@
                 }
             }
         }
+        &__thumbnail {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1000px;
+            height: 400px;
+            margin-bottom: 1rem;
+            > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
     }
 
     &__content {
+        // margin-top: 0.5rem;
         &__item {
             display: flex;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        img {
+            flex-direction: column;
             width: 100%;
-            height: 600px;
+        }
+        & p {
+            flex-direction: column;
+            margin-bottom: 1rem;
+            margin-top: 0;
+        }
+        & img {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            max-height: 600px;
             object-fit: contain;
+        }
+
+        & h1, & h2, & h3, & h4, & h5, & h6 {
+            > a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        & b, & strong {
+            color: $kahlifar-yellow;
         }
     }
 }

@@ -26,9 +26,17 @@
             </span>
           </div>
         </div>
+        <div
+          v-if="article.attributes.Thumbnail.data"
+          class="article__header__thumbnail"
+        >
+          <img
+            :src="`${CMS_URL}${article.attributes.Thumbnail.data.attributes.url}`"
+            alt=""
+          />
+        </div>
       </div>
       <div class="article__content">
-        <img v-if="article.attributes.Thumbnail.data" :src="`${CMS_URL}${article.attributes.Thumbnail.data.attributes.url}`" alt="">
         <div
           class="article__content__item"
           v-for="contentitem in article.attributes.Content"
@@ -39,7 +47,11 @@
             v-if="contentitem.__component == 'text.text'"
             v-html="parsetoMarkdown(contentitem.value)"
           />
-          <img v-if="contentitem.__component == 'image.image'" :src="`${CMS_URL}${contentitem.image.data.attributes.url}`" alt="">
+          <img
+            v-if="contentitem.__component == 'image.image'"
+            :src="`${CMS_URL}${contentitem.image.data.attributes.url}`"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -72,7 +84,12 @@ export default {
   },
   methods: {
     parsetoMarkdown(text) {
-      return marked.parseInline(text, { breaks: true });
+      const renderer = new marked.Renderer()
+      renderer.heading = (text, level) => {
+        const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-')
+        return `<h${level}><a name="${escapedText}" class="anchor" href="#${escapedText}">${text}</a></h${level}>`
+      }
+      return marked(text, { breaks: true, renderer});
     },
   },
 };

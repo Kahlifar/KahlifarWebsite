@@ -1,14 +1,26 @@
 .server-profile {
-    background-color: $kahlifar-red;
-    border-radius: 20px;
     display: flex;
-    flex-direction: row;
-    padding: 1rem 2rem;
-    margin: 1rem 1.5rem;
+    flex-direction: column;
+    margin: 1rem 0;
+    &__banner {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 200px;
+        width: auto;
+        object-fit: cover;
+    }
     &__content {
+        background-color: $kahlifar-antracite;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    &__info {
         margin-right: 2rem;
         &__title {
-            border-bottom: none !important;
+            border-bottom: $kahlifar-orange 1px solid !important;
         }
         &__subtitle {
             margin-bottom: -0.5rem;
@@ -35,27 +47,8 @@
             white-space: nowrap;
         }
     }
-    &.blue {
-        background-color: $kahlifar-blue;
-    }
-    &.light-blue {
-        background-color: $kahlifar-light-blue;
-    }
-    &.sky-blue {
-        background-color: $kahlifar-sky-blue;
-    }
-    &.yellow {
-        background-color: $kahlifar-yellow;
-    }
-    &.orange {
-        background-color: $kahlifar-orange;
-    }
-    &.red {
-        background-color: $kahlifar-red;
-    }
-
     a {
-        color: $black;
+        color: $kahlifar-yellow;
     }
     @media screen and (max-width: $sm-max) {
         flex-direction: column;

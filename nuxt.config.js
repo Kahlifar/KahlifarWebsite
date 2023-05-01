@@ -71,7 +71,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
-    '@nuxt/content',
+    // '@nuxt/content',
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/redirect-module',
