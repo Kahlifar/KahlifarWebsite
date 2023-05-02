@@ -13,13 +13,14 @@
       <span v-if="eventData" class="event-card__title">{{
         eventData.attributes.Title ? eventData.attributes.Title : ""
       }}</span>
-      <p class="event-card__description">
-        {{
-          eventData.attributes.Description
-            ? parseMarkdown(eventData.attributes.Description)
-            : ""
-        }}
-      </p>
+      <p
+        class="event-card__description"
+        v-html="
+          eventData.attributes.End
+            ? `${parseMarkdown(eventData.attributes.Description)}`
+            : ''
+        "
+      ></p>
       <span class="event-card__start-date">
         <span class="material-icons"> event </span>
         {{
@@ -77,7 +78,7 @@ export default {
   },
   methods: {
     parseMarkdown(markdown) {
-      return marked.parseInline(markdown);
+      return marked.parseInline(markdown, { breaks: true });
     },
     formatDateTimestamp(timestamp) {
       return moment(timestamp).format("DD.MM.YYYY, HH:mm:ss");
