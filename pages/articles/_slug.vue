@@ -7,7 +7,7 @@
           <h2>{{ article.attributes.Subtitle }}</h2>
         </div>
         <div class="article__header__meta">
-          <div class="article__header__meta__item">
+          <div class="article__header__meta__item" v-if="article.attributes.Writer.data">
             <span class="material-icons"> edit_note </span>
             <span class="article__header__meta__author">
               {{ article.attributes.Writer.data.attributes.Username }}
@@ -66,8 +66,7 @@ export default {
   layout: "default",
   async asyncData({ $axios, params }) {
     const { data } = await $axios.get(
-      // populate the Content field with the related data
-      `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Thumbnail][populate]=*&populate[Writer][populate]=*&filters[UrlName][$eq]=${params.slug}`
+      `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Writer][populate]=*&populate[Thumbnail][populate]=*&filters[UrlName][$eq]=${params.slug}`
     );
     return { article: data.data[0] };
   },
