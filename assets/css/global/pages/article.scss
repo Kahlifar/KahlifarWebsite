@@ -5,10 +5,14 @@
         border-bottom: $kahilfar-antracite-60 1px solid;
         margin-bottom: 0.75rem;
         &__title {
+            overflow: hidden;
             > h1 {
                 margin-bottom: 0;
+                word-wrap: break-word;
+                // word-wrap: break-word !important;
             }
             > h2 {
+                // word-wrap: break-word !important;
                 border: none;
                 color: $kahilfar-antracite-60;
                 margin-top: 0.5rem;
@@ -19,7 +23,13 @@
             flex-direction: row;
             font-size: 1rem;
             margin-bottom: 1rem;
+            margin-top: 0.5rem;
             gap: 1rem;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                margin-top: 0.1rem;
+                height: 3px !important;
+            }
 
             &__item {
                 display: flex;
@@ -30,6 +40,7 @@
                 border-radius: 17px;
                 background-color: $kahlifar-sky-blue;
                 padding: 0.2rem 0.5rem;
+                white-space: nowrap;
 
                 > .material-icons {
                     font-size: 1.3rem;
@@ -65,6 +76,7 @@
             flex-direction: column;
             margin-bottom: 1rem;
             margin-top: 0;
+            word-wrap: break-word;
         }
         & img {
             width: 100%;

@@ -4,7 +4,7 @@
       <div class="article__header">
         <div class="article__header__title">
           <h1>{{ article.attributes.Title }}</h1>
-          <h2>{{ article.attributes.Subtitle }}</h2>
+          <h2 v-if="article.attributes.Subtitle">{{ article.attributes.Subtitle }}</h2>
         </div>
         <div class="article__header__meta">
           <div class="article__header__meta__item" v-if="article.attributes.Writer.data">
