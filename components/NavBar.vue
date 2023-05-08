@@ -19,6 +19,9 @@
         <nuxt-link href="/socials" to="/socials" class="nav-bar__content__links__link">
           <span class="nav-bar__content__links__link__text">Socials</span>
         </nuxt-link>
+        <nuxt-link href="/articles" to="/articles" class="nav-bar__content__links__link">
+          <span class="nav-bar__content__links__link__text">Artikel</span>
+        </nuxt-link>
       </div>
 
       <LinkButton
