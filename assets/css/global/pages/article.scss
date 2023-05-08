@@ -2,7 +2,7 @@
     &__header {
         display: flex;
         flex-direction: column;
-        border-bottom: $kahilfar-antracite-60 1px solid;
+        border-bottom: $kahlifar-antracite-60 1px solid;
         margin-bottom: 0.75rem;
         &__title {
             overflow: hidden;
@@ -14,7 +14,7 @@
             > h2 {
                 // word-wrap: break-word !important;
                 border: none;
-                color: $kahilfar-antracite-60;
+                color: $kahlifar-antracite-60;
                 margin-top: 0.5rem;
             }
         }
@@ -84,17 +84,105 @@
             height: auto;
             max-height: 600px;
             object-fit: contain;
+
+            margin-top: 0;
+            margin-bottom: 2rem;
         }
 
-        & h1, & h2, & h3, & h4, & h5, & h6 {
+        & h1,
+        & h2,
+        & h3,
+        & h4,
+        & h5,
+        & h6 {
             > a {
                 color: white;
                 text-decoration: none;
             }
         }
 
-        & b, & strong {
+        & b,
+        & strong {
             color: $kahlifar-yellow;
+        }
+    }
+}
+
+// Articles Page
+.article-list {
+    margin-top: 2rem;
+    &__article {
+        display: flex;
+        flex-direction: row;
+        color: white;
+        text-decoration: none;
+        height: max-content;
+
+        border-top: solid 1px white;
+
+        &:hover {
+            background-color: $kahlifar-blue-120;
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+        &__content {
+            padding: 1rem 0;
+            width: 100%;
+
+            > h2 {
+                margin-top: 0;
+                white-space: normal !important;
+                width: fit-content;
+                max-width: max-content;
+            }
+
+            &__footer {
+                display: flex;
+                flex-direction: row;
+                gap: 0.5rem;
+                color: $kahlifar-antracite-60;
+
+                & > * {
+                    display: flex;
+                    flex-direction: row;
+
+                    &:not(:last-child)::after {
+                        content: " •";
+                        margin-left: 0.5rem;
+                    }
+
+                    & .material-icons {
+                        color: $kahlifar-orange;
+                        font-size: 1rem;
+                        margin-right: 0.3rem;
+                    }
+                }
+            }
+        }
+        &__arrow {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 0.75rem;
+            margin-right: 1rem;
+
+            > span:not(.material-icons) {
+                white-space: nowrap;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $sm-max) {
+        &__article {
+            flex-direction: column;
+            &__arrow {
+                margin-bottom: 0.75rem;
+                margin-left: auto;
+            }
         }
     }
 }
