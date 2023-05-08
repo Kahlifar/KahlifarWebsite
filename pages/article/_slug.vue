@@ -16,7 +16,7 @@
           <div class="article__header__meta__item">
             <span class="material-icons"> calendar_today </span>
             <span class="article__header__meta__date">
-              {{ moment(article.attributes.CreatedAt).format("Do MMMM YYYY") }}
+              {{ moment().format("Do MMMM YYYY") }}
             </span>
           </div>
           <div class="article__header__meta__item">
@@ -64,10 +64,13 @@ import { marked } from "marked";
 moment.locale("de");
 export default {
   layout: "default",
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, params, redirect }) {
     const { data } = await $axios.get(
       `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Writer][populate]=*&populate[Thumbnail][populate]=*&filters[UrlName][$eq]=${params.slug}`
     );
+    if (data.data.length == 0) {
+      redirect({ name: "articles", params: { page: 1 }});
+    }
     return { article: data.data[0] };
   },
   head() {
