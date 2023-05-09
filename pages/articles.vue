@@ -70,7 +70,7 @@ export default {
   },
   async fetch() {
     this.articles = await this.$axios.get(
-      `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Writer][populate]=*&populate[Thumbnail][populate]=*&_sort=createdAt:DESC`
+      `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Writer][populate]=*&populate[Thumbnail][populate]=*&_sort=updatedAt:DESC`
     );
     this.articles = this.articles.data.data;
   },
