@@ -17,10 +17,10 @@
         :alt="`Profile ${memberData.user.username}`"
       />
       <span class="profile-component__content__username">
-        {{ memberData.nick ? memberData.nick : memberData.user.username }}
+        {{ memberData.nick ? memberData.nick : memberData.user.display_name }}
       </span>
       <span class="profile-component__content__discordtag">
-        {{ memberData.discordtag }}
+        {{ memberData.user.discriminator == "0" ? "@"+memberData.user.username : memberData.user.username + "#" + memberData.user.discriminator}}
       </span>
       <div class="profile-component__content__tags">
         <span
@@ -78,9 +78,9 @@ export default {
     this.memberData.socials = this.profileData.attributes.Socials;
 
     if (this.profileData.attributes.Username)
-      this.memberData.user.username = this.profileData.attributes.Username;
+      this.memberData.user.display_name = this.profileData.attributes.Username;
     if (this.profileData.attributes.DiscordTag)
-      this.memberData.discordtag = this.profileData.attributes.DiscordTag;
+      this.memberData.username = this.profileData.attributes.DiscordTag;
     if (this.profileData.attributes.ProfilePicture.data) {
       this.memberData.avatarURL =
         process.env.CMS_URL +
