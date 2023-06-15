@@ -1,16 +1,26 @@
 // Link styling in Text
+@mixin link-text {
+    text-decoration: none;
+    color: $kahlifar-yellow;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 span,
+footer,
 td,
 p,
 li {
     > a {
-        text-decoration: none;
-        color: $kahlifar-yellow;
-        font-weight: bold;
+        @include link-text;
+    }
+}
 
-        &:hover {
-            text-decoration: underline;
-        }
+footer {
+    a {
+        @include link-text;
     }
 }
 

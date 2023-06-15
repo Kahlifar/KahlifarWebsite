@@ -88,15 +88,22 @@ export default {
       '/admin/**'
     ],
     routes: [
+      '/',
       '/server',
       '/team',
       '/socials',
+      '/articles',
+
       '/discord',
       '/youtube',
       '/twitter',
       '/twitch',
       '/instagram',
-      '/cd/**'
+
+      '/imprint',
+      '/privacypolicy',
+      '/cd/**',
+      '/article/**'
     ]
   },
   redirect: [
@@ -106,7 +113,6 @@ export default {
     { from: '/twitter', to: twitterLink },
     { from: '/twitch', to: twitchLink },
     { from: '/topgg', to: topggLink },
-    { from: '/esport', to: esportInviteLink },
   ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

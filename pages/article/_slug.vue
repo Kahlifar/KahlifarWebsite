@@ -16,7 +16,13 @@
           <div class="article__header__meta__item">
             <span class="material-icons"> calendar_today </span>
             <span class="article__header__meta__date">
-              {{ moment(article.attributes.CreatedAt).format("Do MMMM YYYY") }}
+              {{ new Date(article.attributes.updatedAt)
+                    .toLocaleDateString("de-DE", {
+                      day: "2-digit",
+                      month: "long",
+                      year: "numeric",
+                    })
+                    .replace(/(\d+)(st|nd|rd|th)/, "$1") }}
             </span>
           </div>
           <div class="article__header__meta__item">
@@ -59,15 +65,16 @@
 </template>
 
 <script>
-import moment from "moment";
 import { marked } from "marked";
-moment.locale("de");
 export default {
   layout: "default",
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, params, redirect }) {
     const { data } = await $axios.get(
       `${process.env.CMS_URL}/api/articles?populate[Content][populate]=*&populate[Writer][populate]=*&populate[Thumbnail][populate]=*&filters[UrlName][$eq]=${params.slug}`
     );
+    if (data.data.length == 0) {
+      redirect({ name: "articles", params: { page: 1 }});
+    }
     return { article: data.data[0] };
   },
   head() {
@@ -77,7 +84,6 @@ export default {
   },
   data() {
     return {
-      moment: moment,
       CMS_URL: process.env.CMS_URL,
     };
   },
