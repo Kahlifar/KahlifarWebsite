@@ -35,7 +35,7 @@
           <h3>Collection and Use of Data</h3>
           <p>
             The Services may allow the user to enter private information on
-            their user profile, including their date of birth. This data will
+            their user profile, including their date of birth or contact informations such as email etc. This data will
             only be used for private and personal purposes and will not be
             disclosed to third parties.
           </p>
