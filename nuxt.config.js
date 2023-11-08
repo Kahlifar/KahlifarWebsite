@@ -75,6 +75,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/redirect-module',
+    'nuxt-winston-log'
   ],
 
   axios: {
