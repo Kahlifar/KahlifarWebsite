@@ -11,8 +11,9 @@
         Wir bedanken uns für die tolle Unterstützung❤. <br>
     </p>
     <TeamComponent teamId="owner" />
-    <TeamComponent teamId="sen-moderator" />
-    <TeamComponent teamId="moderator" />
+    <TeamComponent teamId="manager" />
+    <TeamComponent teamId="moderation" />
+    <TeamComponent teamId="events" />
 
   </div>
 </template>
